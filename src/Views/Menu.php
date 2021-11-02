@@ -12,12 +12,12 @@
     
     <?php 
         foreach($data["menu"] as $x => $val) {
-        ?><div class="cls"> <p><?php echo $val['Id'];?></p><?php
-            ?> <p><?php echo $val['Name'];?></p><?php
-            ?> <p><?php echo $val['Price'];?></p><?php
-            ?> <p><?php echo $val['Descrip'];?></p><?php
-            ?> <p><?php echo $val['Type'];?></p><?php
-            ?> <img class="imgs" src="./public/img/<?php echo $val['Picture'] ?>">
+        ?><div class="cls"> <p><?= $val['Id'];?></p>
+            <p><?= $val['Name'];?></p>
+            <p><?= $val['Price'];?></p>
+            <p><?= $val['Descrip'];?></p>
+            <p><?= $val['Type'];?></p>
+            <img class="imgs" src="./public/img/<?= $val['Picture'] ?>">
             <br>
         </div><?php
         }
