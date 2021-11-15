@@ -1,522 +1,342 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friend Shop</title>
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- boxicons -->
-    <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> -->
-    <link rel="stylesheet" type="text/css" href="../../public/boxicons/css/boxicons.min.css">
-    <!-- app css -->
-    <link rel="stylesheet" type="text/css" href="../../public/css/grid.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./public/css/app.css"> -->
-    <link rel="stylesheet" href="../../public/css/app.css">
-</head>
-
-<body>
-
-    <!-- header -->
-    <header>
-        <!-- mobile menu -->
-        <div class="mobile-menu bg-second">
-            <a href="#" class="mb-logo">ATShop</a>
-            <span class="mb-menu-toggle" id="mb-menu-toggle">
-                <i class='bx bx-menu'></i>
-            </span>
-        </div>
-        <!-- end mobile menu -->
-        <!-- main header -->
-        <div class="header-wrapper" id="header-wrapper">
-            <span class="mb-menu-toggle mb-menu-close" id="mb-menu-close">
-                <i class='bx bx-x'></i>
-            </span>
-            <!-- top header -->
-            <div class="bg-second">
-                <div class="top-header container">
-                    <ul class="devided">
-                        <li>
-                            <a href="#">+840123456789</a>
-                        </li>
-                        <li>
-                            <a href="#">atshop@mail.com</a>
-                        </li>
-                    </ul>
-                    <ul class="devided">
-                        <li class="dropdown">
-                            <a href="">USD</a>
-                            <i class='bx bxs-chevron-down'></i>
-                            <ul class="dropdown-content">
-                                <li><a href="#">VND</a></li>
-                                <li><a href="#">JPY</a></li>
-                                <li><a href="#">EUR</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="">ENGLISH</a>
-                            <i class='bx bxs-chevron-down'></i>
-                            <ul class="dropdown-content">
-                                <li><a href="#">VIETNAMESE</a></li>
-                                <li><a href="#">JAPANESE</a></li>
-                                <li><a href="#">FRENCH</a></li>
-                                <li><a href="#">SPANISH</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">ORDER TRACKING</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end top header -->
-            <!-- mid header -->
-            <div class="bg-main">
-                <div class="mid-header container">
-                    <a href="#" class="logo">Friend Shop</a>
-                    <div class="search">
-                        <input type="text" placeholder="Search">
-                        <i class='bx bx-search-alt'></i>
-                    </div>
-                    <ul class="user-menu">
-                        <li><a href="#"><i class='bx bx-bell'></i></a></li>
-                        <li><a href="/login"><i class='bx bx-user-circle'></i></a></li>
-                        <li><a href="#"><i class='bx bx-cart'></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end mid header -->
-            <!-- bottom header -->
-            <div class="bg-second">
-                <div class="bottom-header container">
-                    <ul class="main-menu">
-                        <li><a href="#">home</a></li>
-                        <!-- mega menu -->
-                        <li class="mega-dropdown">
-                            <a href="./products.html">Shop<i class='bx bxs-chevron-down'></i></a>
-                            <div class="mega-content">
-                                <div class="row">
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row img-row">
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./public/images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./public/images/JBL_JR 310BT_Product Image_Hero_Skyblue.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./public/images/JBLHorizon_001_dvHAMaster.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- end mega menu -->
-                        <li><a href="#">blog</a></li>
-                        <li><a href="#">contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end bottom header -->
-        </div>
-        <!-- end main header -->
-    </header>
-    <!-- end header -->
-
-    <!-- hero section -->
-    <div class="hero">
-        <div class="slider">
-            <div class="container">
-                <!-- slide item -->
-                <div class="slide active">
-                    <div class="info">
-                        <div class="info-content">
-                            <h3 class="top-down">
-                                JBL TUNE 750TNC
-                            </h3>
-                            <h2 class="top-down trans-delay-0-2">
-                                Next-gen design
-                            </h2>
-                            <p class="top-down trans-delay-0-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolor commodi dignissimos culpa, eaque eos necessitatibus possimus veniam, cupiditate rerum deleniti? Libero, ducimus error? Beatae velit dolore sint explicabo! Fugit.
-                            </p>
-                            <div class="top-down trans-delay-0-6">
-                                <button class="btn-flat btn-hover">
-                                    <span>shop now</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img top-down">
-                        <img src="./public/images/JBL_E55BT_KEY_RED_6063_FS_x1-1605x1605px.webp" alt="">
-                    </div>
-                </div>
-                <!-- end slide item -->
-                <!-- slide item -->
-                <div class="slide">
-                    <div class="info">
-                        <div class="info-content">
-                            <h3 class="top-down">
-                                JBL Quantum ONE
-                            </h3>
-                            <h2 class="top-down trans-delay-0-2">
-                                Ipsum dolor
-                            </h2>
-                            <p class="top-down trans-delay-0-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio, voluptatum aperiam nobis quis maxime corporis porro alias soluta sunt quae consectetur aliquid blanditiis perspiciatis labore cumque, ullam, quam eligendi!
-                            </p>
-                            <div class="top-down trans-delay-0-6">
-                                <button class="btn-flat btn-hover">
-                                    <span>shop now</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img right-left">
-                        <img src="./public/images/JBL_E55BT_KEY_BLACK_6175_FS_x1-1605x1605px.png" alt="">
-                    </div>
-                </div>
-                <!-- end slide item -->
-                <!-- slide item -->
-                <div class="slide">
-                    <div class="info">
-                        <div class="info-content">
-                            <h3 class="top-down">
-                                JBL JR 310BT
-                            </h3>
-                            <h2 class="top-down trans-delay-0-2">
-                                Consectetur Elit
-                            </h2>
-                            <p class="top-down trans-delay-0-4">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo aut fugiat, libero magnam nemo inventore in tempora beatae officiis temporibus odit deserunt molestiae amet quam, asperiores, iure recusandae nulla labore!
-                            </p>
-                            <div class="top-down trans-delay-0-6">
-                                <button class="btn-flat btn-hover">
-                                    <span>shop now</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img left-right">
-                        <img src="./public/images/JBL_JR 310BT_Product Image_Hero_Skyblue.png" alt="">
-                    </div>
-                </div>
-                <!-- end slide item -->
-            </div>
-            <!-- slider controller -->
-            <button class="slide-controll slide-next">
-                <i class='bx bxs-chevron-right'></i>
-            </button>
-            <button class="slide-controll slide-prev">
-                <i class='bx bxs-chevron-left'></i>
-            </button>
-            <!-- end slider controller -->
-        </div>
+<div class="section-container">
+    <div class="home-banner">
+        
     </div>
-    <!-- end hero section -->
 
-    <!-- promotion section -->
-    <div class="promotion">
+    <div class="page-container">
         <div class="row">
-            <div class="col-4 col-md-12 col-sm-12">
-                <div class="promotion-box">
-                    <div class="text">
-                        <h3>Headphone & Earbuds</h3>
-                        <button class="btn-flat btn-hover"><span>shop collection</span></button>
+            <div class="col-lg-4">
+                <div class="card-service wow fadeInUp">
+                    <div class="header">
+                        <img src="../../public/img/services/service-1.svg" alt="">
                     </div>
-                    <img src="./public/images/JBLHorizon_001_dvHAMaster.png" alt="">
+                    <div class="body">
+                        <h5 class="text-secondary">SEO Consultancy</h5>
+                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
+                        <a href="service.html" class="btn btn-primary">Read More</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-4 col-md-12 col-sm-12">
-                <div class="promotion-box">
-                    <div class="text">
-                        <h3>JBL Quantum Series</h3>
-                        <button class="btn-flat btn-hover"><span>shop collection</span></button>
+            <div class="col-lg-4">
+                <div class="card-service wow fadeInUp">
+                    <div class="header">
+                        <img src="../../public/img/services/service-2.svg" alt="">
                     </div>
-                    <img src="./public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
+                    <div class="body">
+                        <h5 class="text-secondary">Content Marketing</h5>
+                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
+                        <a href="service.html" class="btn btn-primary">Read More</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-4 col-md-12 col-sm-12">
-                <div class="promotion-box">
-                    <div class="text">
-                        <h3>True Wireless Earbuds</h3>
-                        <button class="btn-flat btn-hover"><span>shop collection</span></button>
+            <div class="col-lg-4">
+                <div class="card-service wow fadeInUp">
+                    <div class="header">
+                        <img src="../../public/img/services/service-3.svg" alt="">
                     </div>
-                    <img src="./public/images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png" alt="">
+                    <div class="body">
+                        <h5 class="text-secondary">Keyword Research</h5>
+                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
+                        <a href="service.html" class="btn btn-primary">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end promotion section -->
+    </div> <!-- .container -->
+</div> <!-- .page-section -->
 
-    <!-- product list -->
-    <div class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest product</h2>
+<div class="page-section" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 py-3 wow fadeInUp">
+                <span class="subhead">About us</span>
+                <h2 class="title-section">The number #1 SEO Service Company</h2>
+                <div class="divider"></div>
+
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                <a href="about.html" class="btn btn-primary mt-3">Read More</a>
             </div>
-            <div class="row" id="latest-products">
-                <div class="col-3 col-md-6 col-sm-12">
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="./public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="./public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
+            <div class="col-lg-6 py-3 wow fadeInRight">
+                <div class="img-fluid py-3 text-center">
+                    <img src="../../public/img/about_frame.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> <!-- .container -->
+</div> <!-- .page-section -->
+
+<div class="page-section bg-light">
+    <div class="container">
+        <div class="text-center wow fadeInUp">
+            <div class="subhead">Our services</div>
+            <h2 class="title-section">How SEO Team Can Help</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
+                <div class="features">
+                    <div class="header mb-3">
+                        <span class="mai-business"></span>
+                    </div>
+                    <h5>OnSite SEO</h5>
+                    <p>We analyse your website's structure, internal architecture & other key</p>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- .container -->
+</div> <!-- .page-section -->
+
+<div class="page-section banner-seo-check">
+    <div class="wrap bg-image" style="background-image: url(../../public/img/bg_pattern.svg);">
+        <div class="container text-center">
+            <div class="row justify-content-center wow fadeInUp">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Check your Website SEO</h2>
+                    <form action="#">
+                        <input type="text" class="form-control" placeholder="E.g google.com">
+                        <button type="submit" class="btn btn-success">Check Now</button>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </div> <!-- .wrap -->
+</div> <!-- .page-section -->
+
+<div class="page-section">
+    <div class="container">
+        <div class="text-center wow fadeInUp">
+            <div class="subhead">Pricing Plan</div>
+            <h2 class="title-section">Choose plan the right for you</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-4 py-3 wow zoomIn">
+                <div class="card-pricing">
+                    <div class="header">
+                        <div class="pricing-type">Basic</div>
+                        <div class="price">
+                            <span class="dollar">$</span>
+                            <h1>39<span class="suffix">.99</span></h1>
                         </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="btn-flat btn-hover btn-cart-add">
-                                    <i class='bx bxs-cart-add'></i>
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
+                        <h5>Per Month</h5>
+                    </div>
+                    <div class="body">
+                        <p>25 Analytics <span class="suffix">Campaign</span></p>
+                        <p>1,300 Change <span class="suffix">Keywords</span></p>
+                        <p>Social Media <span class="suffix">Reviews</span></p>
+                        <p>1 Free <span class="suffix">Optimization</span></p>
+                        <p>24/7 <span class="suffix">Support</span></p>
+                    </div>
+                    <div class="footer">
+                        <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 py-3 wow zoomIn">
+                <div class="card-pricing marked">
+                    <div class="header">
+                        <div class="pricing-type">Standar</div>
+                        <div class="price">
+                            <span class="dollar">$</span>
+                            <h1>59<span class="suffix">.99</span></h1>
                         </div>
+                        <h5>Per Month</h5>
+                    </div>
+                    <div class="body">
+                        <p>25 Analytics <span class="suffix">Campaign</span></p>
+                        <p>1,300 Change <span class="suffix">Keywords</span></p>
+                        <p>Social Media <span class="suffix">Reviews</span></p>
+                        <p>1 Free <span class="suffix">Optimization</span></p>
+                        <p>24/7 <span class="suffix">Support</span></p>
+                    </div>
+                    <div class="footer">
+                        <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
                     </div>
                 </div>
             </div>
-            <div class="section-footer">
-                <a href="./products.html" class="btn-flat btn-hover">view all</a>
-            </div>
-        </div>
-    </div>
-    <!-- end product list -->
 
-    <!-- special product -->
-    <div class="bg-second">
-        <div class="section container">
-            <div class="row">
-                <div class="col-4 col-md-4">
-                    <div class="sp-item-img">
-                        <img src="./public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
-                    </div>
-                </div>
-                <div class="col-7 col-md-8">
-                    <div class="sp-item-info">
-                        <div class="sp-item-name">JBL TUNE 750TNC</div>
-                        <p class="sp-item-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dignissimos itaque et eaque quod harum vero autem? Reprehenderit enim non voluptate! Qui provident modi est non eius ratione, debitis iure.
-                        </p>
-                        <button class="btn-flat btn-hover">shop now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end special product -->
-
-    <!-- product list -->
-    <div class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>best selling</h2>
-            </div>
-            <div class="row" id="best-products">
-                <div class="col-3 col-md-6 col-sm-12">
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="./public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="./public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
+            <div class="col-lg-4 py-3 wow zoomIn">
+                <div class="card-pricing">
+                    <div class="header">
+                        <div class="pricing-type">Professional</div>
+                        <div class="price">
+                            <span class="dollar">$</span>
+                            <h1>99<span class="suffix">.99</span></h1>
                         </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="btn-flat btn-hover btn-cart-add">
-                                    <i class='bx bxs-cart-add'></i>
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
+                        <h5>Per Month</h5>
+                    </div>
+                    <div class="body">
+                        <p>25 Analytics <span class="suffix">Campaign</span></p>
+                        <p>1,300 Change <span class="suffix">Keywords</span></p>
+                        <p>Social Media <span class="suffix">Reviews</span></p>
+                        <p>1 Free <span class="suffix">Optimization</span></p>
+                        <p>24/7 <span class="suffix">Support</span></p>
+                    </div>
+                    <div class="footer">
+                        <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
                     </div>
                 </div>
             </div>
-            <div class="section-footer">
-                <a href="./products.html" class="btn-flat btn-hover">view all</a>
-            </div>
-        </div>
-    </div>
-    <!-- end product list -->
 
-    <!-- blogs -->
-    <div class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>latest blog</h2>
-            </div>
-            <div class="blog">
-                <div class="blog-img">
-                    <img src="./public/images/JBL_Quantum400_Lifestyle1.png" alt="">
-                </div>
-                <div class="blog-info">
-                    <div class="blog-title">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                    <div class="blog-preview">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, eligendi dolore. Sapiente omnis numquam mollitia asperiores animi, veritatis sint illo magnam, voluptatum labore, quam ducimus! Nisi doloremque praesentium laudantium repellat.
-                    </div>
-                    <button class="btn-flat btn-hover">read more</button>
-                </div>
-            </div>
-            <div class="blog row-revere">
-                <div class="blog-img">
-                    <img src="./public/images/JBL_TUNE220TWS_Lifestyle_black.png" alt="">
-                </div>
-                <div class="blog-info">
-                    <div class="blog-title">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                    <div class="blog-preview">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, eligendi dolore. Sapiente omnis numquam mollitia asperiores animi, veritatis sint illo magnam, voluptatum labore, quam ducimus! Nisi doloremque praesentium laudantium repellat.
-                    </div>
-                    <button class="btn-flat btn-hover">read more</button>
-                </div>
-            </div>
-            <div class="section-footer">
-                <a href="#" class="btn-flat btn-hover">view all</a>
-            </div>
         </div>
-    </div>
-    <!-- end blogs -->
+    </div> <!-- .container -->
+</div> <!-- .page-section -->
 
-    <!-- footer -->
-    <footer class="bg-second">
+<!-- Banner info -->
+<div class="page-section banner-info">
+    <div class="wrap bg-image" style="background-image: url(../../public/img/bg_pattern.svg);">
         <div class="container">
-            <div class="row">
-                <div class="col-3 col-md-6">
-                    <h3 class="footer-head">Products</h3>
-                    <ul class="menu">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">product help</a></li>
-                        <li><a href="#">warranty</a></li>
-                        <li><a href="#">order status</a></li>
+            <div class="row align-items-center">
+                <div class="col-lg-6 py-3 pr-lg-5 wow fadeInUp">
+                    <h2 class="title-section">SEO to Improve Brand <br> Visibility</h2>
+                    <div class="divider"></div>
+                    <p>We're an experienced and talented team of passionate consultants who breathe with search engine marketing.</p>
+
+                    <ul class="theme-list theme-list-light text-white">
+                        <li>
+                            <div class="h5">SEO Content Strategy</div>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                        </li>
+                        <li>
+                            <div class="h5">B2B SEO</div>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                        </li>
                     </ul>
                 </div>
-                <div class="col-3 col-md-6">
-                    <h3 class="footer-head">services</h3>
-                    <ul class="menu">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">product help</a></li>
-                        <li><a href="#">warranty</a></li>
-                        <li><a href="#">order status</a></li>
-                    </ul>
-                </div>
-                <div class="col-3 col-md-6">
-                    <h3 class="footer-head">support</h3>
-                    <ul class="menu">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">product help</a></li>
-                        <li><a href="#">warranty</a></li>
-                        <li><a href="#">order status</a></li>
-                    </ul>
-                </div>
-                <div class="col-3 col-md-6 col-sm-12">
-                    <div class="contact">
-                        <h3 class="contact-header">
-                            ATShop
-                        </h3>
-                        <ul class="contact-socials">
-                            <li><a href="#">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                </a></li>
-                            <li><a href="#">
-                                    <i class='bx bxl-instagram-alt'></i>
-                                </a></li>
-                            <li><a href="#">
-                                    <i class='bx bxl-youtube'></i>
-                                </a></li>
-                            <li><a href="#">
-                                    <i class='bx bxl-twitter'></i>
-                                </a></li>
-                        </ul>
-                    </div>
-                    <div class="subscribe">
-                        <input type="email" placeholder="ENTER YOUR EMAIL">
-                        <button>subscribe</button>
+                <div class="col-lg-6 py-3 wow fadeInRight">
+                    <div class="img-fluid text-center">
+                        <img src="../../public/img/banner_image_2.svg" alt="">
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- end footer -->
+    </div> <!-- .wrap -->
+</div> <!-- .page-section -->
 
-    <!-- app js -->
-    <script type="text/javascript" src="../../public/js/app.js"></script>
-    <script type="text/javascript" src="../../public/js/index.js"></script>
-</body>
+<!-- Blog -->
+<!-- <div class="page-section">
+    <div class="container">
+        <div class="text-center wow fadeInUp">
+            <div class="subhead">Our Blog</div>
+            <h2 class="title-section">Read Latest News</h2>
+            <div class="divider mx-auto"></div>
+        </div>
 
-</html>
+        <div class="row mt-5">
+            <div class="col-lg-4 py-3 wow fadeInUp">
+                <div class="card-blog">
+                    <div class="header">
+                        <div class="post-thumb">
+                            <img src="../../public/img/blog/blog-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
+                        <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 py-3 wow fadeInUp">
+                <div class="card-blog">
+                    <div class="header">
+                        <div class="post-thumb">
+                            <img src="../../public/img/blog/blog-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
+                        <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 py-3 wow fadeInUp">
+                <div class="card-blog">
+                    <div class="header">
+                        <div class="post-thumb">
+                            <img src="../../public/img/blog/blog-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
+                        <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 text-center wow fadeInUp">
+                <a href="blog.html" class="btn btn-primary">View More</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../public/js/slick.js"></script>

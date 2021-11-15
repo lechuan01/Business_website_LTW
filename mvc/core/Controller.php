@@ -6,7 +6,8 @@ class Controller{
     }
 
     public function callview($view, $data = []){
-        require_once "./mvc/views/".$view.".php";
+        require_once "./mvc/views/layout/layout.php";
+        // require_once "./mvc/views/".$view.".php";
     }
 }
 ?>
