@@ -1,6 +1,52 @@
 <div class="section-container">
     <div class="home-banner">
-        
+        <div class="slideshow-container">
+            <div class="mySlides img-fade">
+                <img src="../../public/upload/g15.png">
+                <!-- <div class="text">Caption Text</div> -->
+            </div>
+
+            <div class="mySlides img-fade">
+
+                <img src="../../public/upload/ban-phim-co-corsair-k65-mini.jpg">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="mySlides img-fade">
+                <img src="../../public/upload/Corsair-M65-RGB-Elite.jpg">
+                <!-- <div class="text">Caption Three</div> -->
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+        </script>
     </div>
 
     <div class="page-container">
@@ -48,9 +94,9 @@
 <div class="page-section" id="about">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 py-3 wow fadeInUp">
-                <span class="subhead">About us</span>
-                <h2 class="title-section">The number #1 SEO Service Company</h2>
+            <div class="col-lg-6 py-3 wow fadeInUp" style="text-align: justify;">
+                <span class="subhead">Về chúng tôi</span>
+                <h2 class="title-section">Công ty phân phối sản phẩm Corsair hàng đầu Việt Nam</h2>
                 <div class="divider"></div>
 
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -69,8 +115,8 @@
 <div class="page-section bg-light">
     <div class="container">
         <div class="text-center wow fadeInUp">
-            <div class="subhead">Our services</div>
-            <h2 class="title-section">How SEO Team Can Help</h2>
+            <!-- <div class="subhead">Dịch vụ</div> -->
+            <h2 class="title-section">Dịch vụ</h2>
             <div class="divider mx-auto"></div>
         </div>
 
@@ -152,7 +198,7 @@
     </div> <!-- .container -->
 </div> <!-- .page-section -->
 
-<div class="page-section banner-seo-check">
+<!-- <div class="page-section banner-seo-check">
     <div class="wrap bg-image" style="background-image: url(../../public/img/bg_pattern.svg);">
         <div class="container text-center">
             <div class="row justify-content-center wow fadeInUp">
@@ -164,11 +210,11 @@
                     </form>
                 </div>
             </div>
-        </div> <!-- .container -->
-    </div> <!-- .wrap -->
-</div> <!-- .page-section -->
+        </div> 
+    </div> 
+</div> -->
 
-<div class="page-section">
+<!-- <div class="page-section">
     <div class="container">
         <div class="text-center wow fadeInUp">
             <div class="subhead">Pricing Plan</div>
@@ -246,37 +292,12 @@
             </div>
 
         </div>
-    </div> <!-- .container -->
-</div> <!-- .page-section -->
+    </div>
+</div>  -->
 
 <!-- Banner info -->
 <div class="page-section banner-info">
-    <div class="wrap bg-image" style="background-image: url(../../public/img/bg_pattern.svg);">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 py-3 pr-lg-5 wow fadeInUp">
-                    <h2 class="title-section">SEO to Improve Brand <br> Visibility</h2>
-                    <div class="divider"></div>
-                    <p>We're an experienced and talented team of passionate consultants who breathe with search engine marketing.</p>
-
-                    <ul class="theme-list theme-list-light text-white">
-                        <li>
-                            <div class="h5">SEO Content Strategy</div>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-                        </li>
-                        <li>
-                            <div class="h5">B2B SEO</div>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 py-3 wow fadeInRight">
-                    <div class="img-fluid text-center">
-                        <img src="../../public/img/banner_image_2.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="wrap bg-image wow fadeInUp" data-wow-delay="0.6s">
     </div> <!-- .wrap -->
 </div> <!-- .page-section -->
 

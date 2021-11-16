@@ -1,0 +1,88 @@
+@import 'variables.css';
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(224, 223, 233, 0.7);
+  visibility: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1100;
+  box-shadow: var(--shadow);
+}
+
+.back-to-top::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: -4px auto;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #555;
+  border-right: 2px solid #555;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.back-to-top:hover {
+  background: var(--primary);
+}
+
+.back-to-top:hover::after {
+  border-color: #fff;
+}
+
+.page-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+}
+.page-container .row .col-lg-4 .card-service .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .row .col-lg-4 .card-service .body {
+  text-align: center;
+}
+.banner-info {
+  width: 100%;
+  height: 490px;
+}
+.banner-info .bg-image {
+  background-image: url('../upload/corsair-banner.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+}
+.banner-info .banner-info-slogan {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto 0;
+}
+.banner-info .banner-info-slogan div {
+  color: white;
+  font-size: 30px;
+  padding-right: 20px;
+  height: inherit;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-info .banner-info-slogan div h1 {
+  margin: 0;
+}
+.banner-info .banner-info-slogan div h1:first-child {
+  color: rgb(236, 240, 47);
+}
