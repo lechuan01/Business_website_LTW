@@ -14,7 +14,7 @@
         <div class="pass">Quên mật khẩu?</div>
         <button type="submit" class="log-in-button">Đăng nhập</button>
         <div class="signup_link">
-            Bạn là người mới? <a href="/register">Đăng ký</a>
+            Bạn là người mới? <a href="./register">Đăng ký</a>
         </div>
     </form>
 </div>

@@ -2,8 +2,8 @@
 class DB{
     public $connect;
     public $servername ="localhost";
-    public $username="root";
-    public $password="";
+    public $username="Hoai_Nam07";
+    public $password="nam07102001";
     public $dbname="business";
 
     function __construct(){

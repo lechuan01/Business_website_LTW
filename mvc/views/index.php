@@ -2,18 +2,18 @@
     <div class="home-banner">
         <div class="slideshow-container">
             <div class="mySlides img-fade">
-                <img src="../../public/upload/g15.png">
+                <img src="./public/upload/g15.png">
                 <!-- <div class="text">Caption Text</div> -->
             </div>
 
             <div class="mySlides img-fade">
 
-                <img src="../../public/upload/ban-phim-co-corsair-k65-mini.jpg">
+                <img src="./public/upload/ban-phim-co-corsair-k65-mini.jpg">
                 <!-- <div class="text">Caption Two</div> -->
             </div>
 
             <div class="mySlides img-fade">
-                <img src="../../public/upload/Corsair-M65-RGB-Elite.jpg">
+                <img src="./public/upload/Corsair-M65-RGB-Elite.jpg">
                 <!-- <div class="text">Caption Three</div> -->
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -54,7 +54,7 @@
             <div class="col-lg-4">
                 <div class="card-service wow fadeInUp">
                     <div class="header">
-                        <img src="../../public/img/services/service-1.svg" alt="">
+                        <img src="./public/img/services/service-1.svg" alt="">
                     </div>
                     <div class="body">
                         <h5 class="text-secondary">SEO Consultancy</h5>
@@ -66,7 +66,7 @@
             <div class="col-lg-4">
                 <div class="card-service wow fadeInUp">
                     <div class="header">
-                        <img src="../../public/img/services/service-2.svg" alt="">
+                        <img src="./public/img/services/service-2.svg" alt="">
                     </div>
                     <div class="body">
                         <h5 class="text-secondary">Content Marketing</h5>
@@ -78,7 +78,7 @@
             <div class="col-lg-4">
                 <div class="card-service wow fadeInUp">
                     <div class="header">
-                        <img src="../../public/img/services/service-3.svg" alt="">
+                        <img src="./public/img/services/service-3.svg" alt="">
                     </div>
                     <div class="body">
                         <h5 class="text-secondary">Keyword Research</h5>
@@ -105,7 +105,7 @@
             </div>
             <div class="col-lg-6 py-3 wow fadeInRight">
                 <div class="img-fluid py-3 text-center">
-                    <img src="../../public/img/about_frame.png" alt="">
+                    <img src="./public/img/about_frame.png" alt="">
                 </div>
             </div>
         </div>
@@ -360,4 +360,4 @@
     </div>
 </div> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="../../public/js/slick.js"></script>
+<script src="./public/js/slick.js"></script>
