@@ -12,7 +12,7 @@ class App{
     function __construct(){
         $url = $this->UrlProcess();
         // Controller
-        if( file_exists("./mvc/controllers/".$url[0]."controller.php") ){
+        if( file_exists("./mvc/controllers/".$url[0]."Controller.php") ){
             $this->controller = $url[0]."Controller";
             console_log($this->controller);
             unset($url[0]);
@@ -34,7 +34,11 @@ class App{
 
     function UrlProcess(){ 
         $uri = $_SERVER['REQUEST_URI'];
+        $index = explode("/", filter_var(trim($_SERVER['PHP_SELF'], "/")));
+
         $tmp1 = explode("/", filter_var(trim($uri, "/")));
+        array_splice($tmp1, 0, count(array_intersect($index,$tmp1)));
+        
         $tmp2 = explode("?", $tmp1[count($tmp1) - 1]);
         if (count($tmp2) > 1) {
             $this->params = explode("=", $tmp2[count($tmp2) - 1]);

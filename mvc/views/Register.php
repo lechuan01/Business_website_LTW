@@ -1,6 +1,6 @@
 <div class="login-center register">
     <h2>Tạo tài khoản</h2>
-    <form action="/register" method="POST">
+    <form action="" method="POST">
         <div class="txt_field">
             <input type="text" name="lastName" required>
             <span></span>
@@ -28,7 +28,7 @@
         </div>
         <button type="submit" class="log-in-button">Đăng ký</button>
         <div class="signup_link">
-            Bạn đã có tài khoản? <a href="/login">Đăng nhập ngay</a>
+            Bạn đã có tài khoản? <a href="./login">Đăng nhập ngay</a>
         </div>
     </form>
 </div>
