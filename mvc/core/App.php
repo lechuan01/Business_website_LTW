@@ -14,9 +14,9 @@ class App{
         // Controller
         if( file_exists("./mvc/controllers/".$url[0]."Controller.php") ){
             $this->controller = $url[0]."Controller";
-            console_log($this->controller);
             unset($url[0]);
-        }
+        }            
+        console_log($this->controller);
         require_once "./mvc/controllers/". $this->controller .".php";
         $this->controller = new $this->controller;
 
