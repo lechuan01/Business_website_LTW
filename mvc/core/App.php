@@ -36,7 +36,8 @@ class App{
 
     function UrlProcess(){ 
         $url_components = parse_url($_SERVER['REQUEST_URI']);
-        parse_str($url_components['query'], $this->params);
+        if(!empty($url_components['query']))
+            parse_str($url_components['query'], $this->params);
         $index = explode("/", filter_var(trim($_SERVER['PHP_SELF'], "/")));
         $arr_tmp = explode("/", filter_var(trim($url_components['path'], "/")));
         array_splice($arr_tmp, 0, count(array_intersect($index,$arr_tmp))); 
