@@ -23,19 +23,19 @@
 
 <body>
     <div class="back-to-top"></div>
-    <?php require "./mvc/views/partials/header.php"; ?>
+    <!-- <?php require "./mvc/views/partials/header.php"; ?> -->
     <div class="main-container">
         <?php require "./mvc/views/".$view.".php"; ?>
     </div>
 
-    <?php require "./mvc/views/partials/footer.php"; ?>
+    <!-- <?php require "./mvc/views/partials/footer.php"; ?> -->
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/public/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/public/js/google-maps.js"></script>
-    <script src="/public/vendor/wow/wow.min.js"></script>
-    <script src="/public/js/products.js"></script>
-    <script src="/public/js/theme.js"></script>
+    <script src="/phpapp/btl_ltw/public/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/phpapp/btl_ltw/public/js/google-maps.js"></script>
+    <script src="/phpapp/btl_ltw/public/vendor/wow/wow.min.js"></script>
+    <script src="/phpapp/btl_ltw/public/js/products.js"></script>
+    <script src="/phpapp/btl_ltw/public/js/theme.js"></script>
 </body>
 </html>

@@ -6,6 +6,9 @@ class productController extends Controller{
         // $menu = $menu->getDB();
         $this->callview("product");
     }
+    public function productDetail() {
+        $this->callview("productDetail");
+    }
 }
 
 ?>

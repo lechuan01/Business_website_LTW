@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('.product-items .product').click(function() {
-        location.href = "./productDetail";
+        location.href = "./product/productDetail";
     });
 });

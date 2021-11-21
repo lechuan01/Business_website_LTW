@@ -2,19 +2,19 @@
     <h1 class="lg-title">Tất cả sản phẩm</h1>
     <div class="product-category">
         <div class="keyboard">
-            <img src="./public/upload/corsair-k65-rgb-mini.jpeg" alt="">
+            <img src="/phpapp/btl_ltw/public/upload/corsair-k65-rgb-mini.jpeg" alt="">
             <p>Keyboard</p>
         </div>
         <div class="mouse">
-            <img src="./public/upload/Corsair-M65-RGB-Elite.jpg" alt="">
+            <img src="/phpapp/btl_ltw/public/upload/Corsair-M65-RGB-Elite.jpg" alt="">
             <p>Mouse</p>
         </div>
         <div class="headphone">
-            <img src="./public/upload/corsair-headphone.jpg" alt="">
+            <img src="/phpapp/btl_ltw/public/upload/corsair-headphone.jpg" alt="">
             <p>Headphone</p>
         </div>
         <div class="case">
-            <img src="./public/upload/corsair-case.jpg" alt="">
+            <img src="/phpapp/btl_ltw/public/upload/corsair-case.jpg" alt="">
             <p>Case</p>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="product wow fadeInDown">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="./public/upload/corsair-k63-wire.jpg" alt="product image">
+                    <img src="/phpapp/btl_ltw/public/upload/corsair-k63-wire.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -67,7 +67,7 @@
         <div class="product wow fadeInDown" data-wow-delay="0.1s">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="./public/upload/ban-phim-co-corsair-k65-mini.jpg" alt="product image">
+                    <img src="/phpapp/btl_ltw/public/upload/ban-phim-co-corsair-k65-mini.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -100,7 +100,7 @@
         <div class="product wow fadeInDown" data-wow-delay="0.2s">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="./public/upload/products/1.jpg" alt="product image">
+                    <img src="/phpapp/btl_ltw/public/upload/products/1.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -133,7 +133,7 @@
         <div class="product wow fadeInDown" data-wow-delay="0.3s">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="./public/upload/products/2.jpg" alt="product image">
+                    <img src="/phpapp/btl_ltw/public/upload/products/2.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart

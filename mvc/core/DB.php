@@ -2,9 +2,9 @@
 class DB{
     public $connect;
     public $servername ="localhost";
-    public $username="Hoai_Nam07";
-    public $password="nam07102001";
-    public $dbname="business";
+    public $username="root";
+    public $password="";
+    public $dbname="corgear";
 
     function __construct(){
         $this->connect = mysqli_connect($this->servername,$this->username,$this->password);
