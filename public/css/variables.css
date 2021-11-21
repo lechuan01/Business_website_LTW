@@ -37,4 +37,11 @@ a:hover {
   width: 100%;
   padding-left: 100px;
   padding-right: 100px;
+  padding-top: 100px;
+}
+@media (max-width: 1024px) {
+  .main-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

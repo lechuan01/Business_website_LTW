@@ -27,7 +27,7 @@
                 <div class="card-blog">
                     <div class="header">
                         <div class="post-thumb">
-                            <img src="../../public/img/blog/blog-1.jpg" alt="">
+                            <img src="./public/img/blog/blog-1.jpg" alt="">
                         </div>
                     </div>
                     <div class="body">
