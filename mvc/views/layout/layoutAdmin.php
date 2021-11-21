@@ -9,16 +9,16 @@
 
     <title>Gaming</title>
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
 
     <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="/public/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
 
     <!-- ANIMATION -->
-    <link rel="stylesheet" href="/public/vendor/animate/animate.css">
+    <link rel="stylesheet" href="public/vendor/animate/animate.css">
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css">
 </head>
 
 <body>
