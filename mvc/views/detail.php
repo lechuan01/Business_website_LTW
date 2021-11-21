@@ -3,28 +3,28 @@
     <div class="container">
         <div class="box">
             <div class="breadcumb">
-                <a href="./index.html">home</a>
+                <a href="index.html">home</a>
                 <span><i class='bx bxs-chevrons-right'></i></span>
-                <a href="./public/products.html">all products</a>
+                <a href="public/products.html">all products</a>
                 <span><i class='bx bxs-chevrons-right'></i></span>
-                <a href="./public/product-detail.html">JBL Tune 750TNC</a>
+                <a href="public/product-detail.html">JBL Tune 750TNC</a>
             </div>
         </div>
         <div class="row product-row">
             <div class="col-5 col-md-12">
                 <div class="product-img" id="product-img">
-                    <img src="./public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
+                    <img src="public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
                 </div>
                 <div class="box">
                     <div class="product-img-list">
                         <div class="product-img-item">
-                            <img src="./public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
+                            <img src="public/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
                         </div>
                         <div class="product-img-item">
-                            <img src="./public/images/JBL-Endurance-Sprint_Alt_Red-1605x1605px.webp" alt="">
+                            <img src="public/images/JBL-Endurance-Sprint_Alt_Red-1605x1605px.webp" alt="">
                         </div>
                         <div class="product-img-item">
-                            <img src="./public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
+                            <img src="public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
                         </div>
                     </div>
                 </div>

@@ -2,19 +2,19 @@
     <h1 class="lg-title">Tất cả sản phẩm</h1>
     <div class="product-category">
         <div class="keyboard">
-            <img src="/phpapp/btl_ltw/public/upload/corsair-k65-rgb-mini.jpeg" alt="">
+            <img src="public/upload/corsair-k65-rgb-mini.jpeg" alt="">
             <p>Keyboard</p>
         </div>
         <div class="mouse">
-            <img src="/phpapp/btl_ltw/public/upload/Corsair-M65-RGB-Elite.jpg" alt="">
+            <img src="public/upload/Corsair-M65-RGB-Elite.jpg" alt="">
             <p>Mouse</p>
         </div>
         <div class="headphone">
-            <img src="/phpapp/btl_ltw/public/upload/corsair-headphone.jpg" alt="">
+            <img src="public/upload/corsair-headphone.jpg" alt="">
             <p>Headphone</p>
         </div>
         <div class="case">
-            <img src="/phpapp/btl_ltw/public/upload/corsair-case.jpg" alt="">
+            <img src="public/upload/corsair-case.jpg" alt="">
             <p>Case</p>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="product wow fadeInDown">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="/phpapp/btl_ltw/public/upload/corsair-k63-wire.jpg" alt="product image">
+                    <img src="public/upload/corsair-k63-wire.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
