@@ -84,6 +84,7 @@
   margin: 0;
   position: relative;
   height: max-content;
+  cursor: pointer;
 }
 .product:hover {
   box-shadow: var(--shadow);
