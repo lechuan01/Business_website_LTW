@@ -3,31 +3,31 @@
     <div class="product-imgs">
         <div class="img-display">
             <div class="img-showcase">
-                <img src="/phpapp/btl_ltw/public/images/QeAPsgjcEeKO2v8u.jpg" alt="shoe image">
-                <img src="/phpapp/btl_ltw/public/images/corsair-k65-rgb-mini-07.jpg" alt="shoe image">
-                <img src="/phpapp/btl_ltw/public/images/5510059_194111351_4354441971253318_4592268824123829596_n.jpg" alt="shoe image">
-                <img src="/phpapp/btl_ltw/public/images/switch-cua-ban-phim-corsair-k65-mini-red-sw-usb-rgb-red-switch.jpg" alt="shoe image">
+                <img src="/public/images/QeAPsgjcEeKO2v8u.jpg" alt="shoe image">
+                <img src="/public/images/corsair-k65-rgb-mini-07.jpg" alt="shoe image">
+                <img src="/public/images/5510059_194111351_4354441971253318_4592268824123829596_n.jpg" alt="shoe image">
+                <img src="/public/images/switch-cua-ban-phim-corsair-k65-mini-red-sw-usb-rgb-red-switch.jpg" alt="shoe image">
             </div>
         </div>
         <div class="img-select">
             <div class="img-item">
                 <a href="#" data-id="1">
-                    <img src="/phpapp/btl_ltw/public/images/QeAPsgjcEeKO2v8u.jpg" alt="shoe image">
+                    <img src="/public/images/QeAPsgjcEeKO2v8u.jpg" alt="shoe image">
                 </a>
             </div>
             <div class="img-item">
                 <a href="#" data-id="2">
-                    <img src="/phpapp/btl_ltw/public/images/corsair-k65-rgb-mini-07.jpg" alt="shoe image">
+                    <img src="/public/images/corsair-k65-rgb-mini-07.jpg" alt="shoe image">
                 </a>
             </div>
             <div class="img-item">
                 <a href="#" data-id="3">
-                    <img src="/phpapp/btl_ltw/public/images/5510059_194111351_4354441971253318_4592268824123829596_n.jpg" alt="shoe image">
+                    <img src="/public/images/5510059_194111351_4354441971253318_4592268824123829596_n.jpg" alt="shoe image">
                 </a>
             </div>
             <div class="img-item">
                 <a href="#" data-id="4">
-                    <img src="/phpapp/btl_ltw/public/images/switch-cua-ban-phim-corsair-k65-mini-red-sw-usb-rgb-red-switch.jpg" alt="shoe image">
+                    <img src="/public/images/switch-cua-ban-phim-corsair-k65-mini-red-sw-usb-rgb-red-switch.jpg" alt="shoe image">
                 </a>
             </div>
         </div>
@@ -71,4 +71,4 @@
 <div class="card product-review">
     <h2>Nhận xét</h2>    
 </div>
-<script src="/phpapp/btl_ltw/public/js/productDetail.js"></script>
+<script src="/public/js/productDetail.js"></script>
