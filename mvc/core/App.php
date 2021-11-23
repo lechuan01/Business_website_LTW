@@ -41,7 +41,6 @@ class App{
         $index = explode("/", filter_var(trim($_SERVER['PHP_SELF'], "/")));
         $arr_tmp = explode("/", filter_var(trim($url_components['path'], "/")));
         array_splice($arr_tmp, 0, count(array_intersect($index,$arr_tmp))); 
-        
         return $arr_tmp;
     }
 
