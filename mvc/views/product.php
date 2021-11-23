@@ -38,7 +38,7 @@
                 <button class="btn-cart"> add to cart
                     <span><i class="fas fa-plus"></i></span>
                 </button>
-                <button type="button" class="btn-buy"> buy now
+                <button class="btn-buy"> buy now
                     <span><i class="fas fa-shopping-cart"></i></span>
                 </button>
             </div>

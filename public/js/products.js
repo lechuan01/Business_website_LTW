@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $('.btn-cart').click(function(e){
         //console.log(e.target.name);
-        console.log(e.target.parentNode.parentNode.id);
         $.ajax({
             url:"/product/Store",
             method: "GET",
@@ -59,5 +58,18 @@ $(document).ready(function() {
         return (a > b) ? -1 : 1;
     }
     
-
+    $(".btn-buy").click(function(e){
+        //console.log(e.target.name);
+        $.ajax({
+            url:"/product/Store",
+            method: "GET",
+            data:{
+                "id": e.target.parentNode.parentNode.id
+            },
+            success:function(data){
+                $('#quantity-product').text(data);
+            }
+        });
+        location.href = "/cart";
+    })
 });
