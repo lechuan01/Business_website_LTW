@@ -6,7 +6,7 @@
             <span></span>
             <label>Số điện thoại</label>
         </div>
-        <div class="txt_field" > <!-- style="margin-bottom:30px;" -->
+        <div class="txt_field">
             <input type="password" name="password" required>
             <span></span>
             <label>Mật khẩu</label>

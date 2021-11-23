@@ -128,10 +128,11 @@
   font-weight: 400;
 }
 .purchase-info {
+  position: absolute;
   bottom: 0;
-  width: 50%;
+  width: 100%;
 }
-.purchase-info {
+.purchase-info .btn {
   text-align: center;
   outline: 0;
   height: 60px;
@@ -139,6 +140,20 @@
   margin: 10px;
 }
 
+.purchase-info .btn {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+}
+.purchase-info .btn:first-of-type {
+  background: #256eff;
+}
+.purchase-info .btn:last-of-type {
+  background: #000;
+}
+.purchase-info .btn:hover {
+  opacity: 0.9;
+}
 .social-links {
   display: flex;
   align-items: center;
