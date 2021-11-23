@@ -46,6 +46,8 @@ $(document).ready(function() {
         for(var i = 0;i< n; i++){
             x += parseInt($(".total-price").eq(i).text());
         }
+        x = Math.round((x*1.1) * 100)/100;
+
         $('.total-number').text(x);
         // $.ajax({
         //   url:"/cart/TotalPrice",
