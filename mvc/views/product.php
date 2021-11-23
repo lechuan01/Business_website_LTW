@@ -95,13 +95,13 @@
                 <p class="product-price">$ 150.00</p>
                 <p class="product-price">$ 133.00</p>
             </div>
-        </div> -->
+        </div>
         <!-- end of single product -->
         <!-- single product -->
-        <!-- <div class="product wow fadeInDown" data-wow-delay="0.2s">
+        <div class="product wow fadeInDown" data-wow-delay="0.2s">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="/upload/products/1.jpg" alt="product image">
+                    <img src="/public/upload/products/1.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -128,13 +128,13 @@
                 <p class="product-price">$ 150.00</p>
                 <p class="product-price">$ 133.00</p>
             </div>
-        </div> -->
+        </div>
         <!-- end of single product -->
         <!-- single product -->
-        <!-- <div class="product wow fadeInDown" data-wow-delay="0.3s">
+        <div class="product wow fadeInDown" data-wow-delay="0.3s">
             <div class="product-content">
                 <div class="product-img">
-                    <img src="/upload/products/2.jpg" alt="product image">
+                    <img src="/public/upload/products/2.jpg" alt="product image">
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -165,10 +165,10 @@
             <div class="off-info">
                 <h2 class="sm-title">25% off</h2>
             </div>
-        </div> -->
+        </div>
         <!-- end of single product -->
     </div>
-</div> <br>
+</div>
 
 <!-- <div class="product-collection">
     <div class="container">
