@@ -255,7 +255,6 @@
 .keyboard,.mouse,.headphone,.case, .lg-title{
   cursor: pointer;
 }
-
 /* Media Queries */
 @media screen and (max-width: 1500px) {
   .product-items {

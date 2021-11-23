@@ -4,7 +4,6 @@ class DB{
     public $servername ="localhost";
     public $username="Hoai_Nam07";
     public $password="nam07102001";
-
     public $dbname="corgear";
 
     function __construct(){

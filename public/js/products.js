@@ -72,4 +72,3 @@ $(document).ready(function() {
         });
         location.href = "/cart";
     })
-});

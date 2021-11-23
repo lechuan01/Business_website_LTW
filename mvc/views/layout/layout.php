@@ -40,5 +40,4 @@
         <script src="/public/js/theme.js"></script>
         <script src="/public/js/productDetail.js"></script>
     </body>
-
 </html>

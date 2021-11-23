@@ -24,6 +24,7 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/public/css/admin/app.css">
+
 </head>
 
 <body>

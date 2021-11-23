@@ -8,7 +8,6 @@
     // $controller->$actionName();
     session_start();
 
-
     require_once "./mvc/index.php";
     $myApp = new App();
 ?>
