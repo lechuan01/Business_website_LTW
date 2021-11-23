@@ -23,11 +23,13 @@
                 </a>
             </div>
             <?php } ?>
+
         </div>
     </div>
     <!-- card right -->
     <div class="product-content">
         <h2 class="product-title"><?= $data['detail'][0]['name']?></h2>
+
         <!-- <a href="#" class="product-link">visit nike store</a> -->
         <div class="product-rating">
             <i class="fas fa-star"></i>
@@ -55,6 +57,7 @@
 
         <div class="" id="<?= $data['detail'][0]['id']?>">
             <button id="submitbtn" class="btn btn-danger purchase-info" >Thêm vào giỏ hàng <i class="fas fa-shopping-cart"></i></button>
+
         </div>
     </div>
 </div>
@@ -64,3 +67,4 @@
 <div class="card product-review">
     <h2>Nhận xét</h2>    
 </div>
+

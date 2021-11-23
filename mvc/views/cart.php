@@ -36,6 +36,7 @@
             <div class="payment-info">
                 <p>Số sản phẩm</p>
                 <p><?= count($_SESSION['Cart'])?></p>
+
             </div>
             <div class="payment-info">
                 <p>Thuế VAT</p>
@@ -44,6 +45,7 @@
             <div class="total-payment">
                 <p class="total-title">Thành tiền</p>
                 <p class="total-number"></p>
+
             </div>
             <div class="process-to-checkout">
                 <a class="checkout-button" href="/checkout">Thanh toán</a>

@@ -46,6 +46,7 @@
             <div class="product-info" name="<?= $product["price"]?>">
                 <div class="product-info-top rating">
                     <h2 class="sm-title"><?= $product["category"]?></h2>
+
                     <div class="rating">
                         <span><i class="fas fa-star"></i></span>
                         <span><i class="fas fa-star"></i></span>
@@ -66,6 +67,7 @@
         <?php }?>
         <!-- end of single product -->
         <!-- <div class="product wow fadeInDown" data-wow-delay="0.1s">
+
             <div class="product-content">
                 <div class="product-img">
                     <img src="/public/upload/ban-phim-co-corsair-k65-mini.jpg" alt="product image">
@@ -102,6 +104,7 @@
             <div class="product-content">
                 <div class="product-img">
                     <img src="/upload/products/1.jpg" alt="product image">
+
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -135,6 +138,7 @@
             <div class="product-content">
                 <div class="product-img">
                     <img src="/upload/products/2.jpg" alt="product image">
+
                 </div>
                 <div class="product-btns">
                     <button type="button" class="btn-cart"> add to cart
@@ -169,6 +173,7 @@
         <!-- end of single product -->
     </div>
 </div> <br>
+
 
 <!-- <div class="product-collection">
     <div class="container">

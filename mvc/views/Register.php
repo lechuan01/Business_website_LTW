@@ -29,6 +29,7 @@
         <button type="submit" class="log-in-button">Đăng ký</button>
         <div class="signup_link">
             Bạn đã có tài khoản? <a href="/login">Đăng nhập ngay</a>
+
         </div>
     </form>
 </div>

@@ -14,6 +14,7 @@
             <li><a href="#">Liên hệ</a></li>
             <li><a href="/cart"><i class="fas fa-shopping-cart"></i>
                 <span id="quantity-product"><?= empty($_SESSION["Cart"])?0:count($_SESSION["Cart"])?></span>
+
                 </a></li>
             <li><a href="/login">Đăng nhập</a></li>
         </ul>
