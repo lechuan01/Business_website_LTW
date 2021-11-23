@@ -21,21 +21,23 @@
     <link rel="stylesheet" href="/public/css/app.css">
 </head>
 
-<body>
-    <div class="back-to-top"></div>
-    <?php require "./mvc/views/partials/header.php"; ?>
-    <div class="main-container">
-        <?php require "./mvc/views/".$view.".php"; ?>
-    </div>
+    <body>
+        <div class="back-to-top"></div>
+        <?php require "./mvc/views/partials/header.php"; ?>
+        
+        <div class="main-container">
+            <?php require "./mvc/views/".$view.".php"; ?>
+        </div>
 
-    <?php require "./mvc/views/partials/footer.php"; ?>
+        <?php require "./mvc/views/partials/footer.php"; ?>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/public/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/public/js/google-maps.js"></script>
-    <script src="/public/vendor/wow/wow.min.js"></script>
-    <script src="/public/js/products.js"></script>
-    <script src="/public/js/theme.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="/public/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/public/js/google-maps.js"></script>
+        <script src="/public/vendor/wow/wow.min.js"></script>
+        <script src="/public/js/products.js"></script>
+        <script src="/public/js/cart.js"></script>
+        <script src="/public/js/theme.js"></script>
+        <script src="/public/js/productDetail.js"></script>
+    </body>
 </html>

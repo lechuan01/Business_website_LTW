@@ -19,32 +19,33 @@
         </div>
     </div>
     <div class="product-filter">
-        <select name="" id="">
-            <option value="">Mới nhất</option>
-            <option value="">Giá thấp đến cao</option>
-            <option value="">Giá cao đến thấp</option>
+        <select name="" id="SORT">
+            <option value="newold">Mới nhất</option>
+            <option value="priceincrease">Giá thấp đến cao</option>
+            <option value="pricereduce">Giá cao đến thấp</option>
         </select>
     </div>
     <div class="product-items">
+        <?php foreach ($data["product"] as $key => $product) {
+        ?>
         <!-- single product -->
-        <div class="product wow fadeInDown">
-            <div class="product-content">
+        <div id="<?= $product["id"]?>" name="<?= $product["category"]?>" class="product wow fadeInDown">
                 <div class="product-img">
-                    <img src="/public/upload/corsair-k63-wire.jpg" alt="product image">
+                    <img src="./public/upload/<?= $product["thumnail"]?>" alt="product image">
                 </div>
-                <div class="product-btns">
-                    <button type="button" class="btn-cart"> add to cart
-                        <span><i class="fas fa-plus"></i></span>
-                    </button>
-                    <button type="button" class="btn-buy"> buy now
-                        <span><i class="fas fa-shopping-cart"></i></span>
-                    </button>
-                </div>
+
+            <div class="product-btns">
+                <button class="btn-cart"> add to cart
+                    <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy"> buy now
+                    <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
             </div>
 
-            <div class="product-info">
-                <div class="product-info-top">
-                    <h2 class="sm-title">Bàn phím</h2>
+            <div class="product-info" name="<?= $product["price"]?>">
+                <div class="product-info-top rating">
+                    <h2 class="sm-title"><?= $product["category"]?></h2>
                     <div class="rating">
                         <span><i class="fas fa-star"></i></span>
                         <span><i class="fas fa-star"></i></span>
@@ -53,18 +54,18 @@
                         <span><i class="far fa-star"></i></span>
                     </div>
                 </div>
-                <a href="#" class="product-name">Corsair K63 có dây</a>
-                <p class="product-price">$ 150.00</p>
-                <p class="product-price">$ 133.00</p>
+                <a href="#" class="product-name"><?= $product["name"]?></a>
+                <p class="product-price">$ <?= $product["price"]*1.1?></p>
+                <p class="product-price">$ <?= $product["price"]?></p>
             </div>
 
-            <div class="off-info">
+            <!-- <div class="off-info">
                 <h2 class="sm-title">25% off</h2>
-            </div>
+            </div> -->
         </div>
+        <?php }?>
         <!-- end of single product -->
-        <!-- single product -->
-        <div class="product wow fadeInDown" data-wow-delay="0.1s">
+        <!-- <div class="product wow fadeInDown" data-wow-delay="0.1s">
             <div class="product-content">
                 <div class="product-img">
                     <img src="/public/upload/ban-phim-co-corsair-k65-mini.jpg" alt="product image">

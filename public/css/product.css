@@ -252,7 +252,9 @@
 .btn-dark:hover {
   background: var(--carribean-green);
 }
-
+.keyboard,.mouse,.headphone,.case, .lg-title{
+  cursor: pointer;
+}
 /* Media Queries */
 @media screen and (max-width: 1500px) {
   .product-items {
