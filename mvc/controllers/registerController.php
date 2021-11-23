@@ -2,8 +2,6 @@
 
 class registerController extends Controller{
     public function show(){
-        // $menu = $this->callmodel("DishDB");
-        // $menu = $menu->getDB();
         $this->callview("register");
     }
     public $UserDB;
@@ -11,10 +9,6 @@ class registerController extends Controller{
     public function __construct(){
         $this->UserDB = $this->callmodel("UserDB");
     }
-    # hiển thị trang đăng ký 
-    /* public function show(){
-        $this->callview("Home",["page"=>"Register"]);
-    } */
    # đăng ký tài khoản khách hàng
     public function registerUser(){
         //1. get data user nhập
@@ -38,6 +32,4 @@ class registerController extends Controller{
             
         }
     }
-    # đăng ký tài khoản nhân viên
-
 ?>

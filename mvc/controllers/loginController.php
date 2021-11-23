@@ -8,8 +8,6 @@ class loginController extends Controller{
         $this->UserDB = $this->callmodel("UserDB");
     }
     public function show(){
-        // $menu = $this->callmodel("DishDB");
-        // $menu = $menu->getDB();
         $this->callview("login");
     }
     public function login(){
@@ -37,7 +35,6 @@ class loginController extends Controller{
                     echo "true";
                 } else {
                     echo 'false';
-                    
                     //echo "Mật khẩu không đúng";
                 }
             }
