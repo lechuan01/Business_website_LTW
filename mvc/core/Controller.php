@@ -5,7 +5,7 @@ class Controller{
         return new $model;
     }
 
-    public function callview($view, $layout = "layout", $data = []){
+    public function callview($view, $data = [], $layout = "layout"){
         require_once "./mvc/views/layout/" . $layout . ".php";
         // require_once "./mvc/views/".$view.".php";
     }

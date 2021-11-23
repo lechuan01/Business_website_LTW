@@ -6,7 +6,8 @@
     // require "./Controllers/${controllerName}.php";
     // $controller = new $controllerName;
     // $controller->$actionName();
-    // session_start();
+    session_start();
+
     require_once "./mvc/index.php";
     $myApp = new App();
 ?>
