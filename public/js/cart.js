@@ -67,9 +67,11 @@ $(document).ready(function() {
             method: "GET",
             data:{
             "id": id
+            },
+            success:function(data){
+                if($("#quantity-product").html() == "1"){location.reload(); return;}
             }
         });
-        if($("#quantity-product").html() == "1"){location.reload(); return;} 
         $(".payment-info:first").children("p:last").html(Number($("#quantity-product").html())-1);
         $("#quantity-product").html(Number($("#quantity-product").html())-1);
         $(".cart-item-info[name="+id+"]").remove();
