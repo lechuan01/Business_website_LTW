@@ -16,7 +16,19 @@
                 <span id="quantity-product"><?= empty($_SESSION["Cart"])?0:count($_SESSION["Cart"])?></span>
 
                 </a></li>
-            <li><a href="/login">Đăng nhập</a></li>
+            <li>
+                <?php if (empty($_SESSION["id"])) {
+                    ?>
+                    <a href="/login">Đăng nhập</a>
+                    <?php
+                }
+                else{
+                    ?>
+                    <a href="#" id="logout" name="logout">Đăng Xuất</a>
+                    <?php
+                } 
+                ?>
+                </li>
         </ul>
     </nav>
 </header>

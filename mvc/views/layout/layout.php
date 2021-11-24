@@ -39,5 +39,7 @@
         <script src="/public/js/cart.js"></script>
         <script src="/public/js/theme.js"></script>
         <script src="/public/js/productDetail.js"></script>
+        <script src="/public/js/login.js"></script>
+        <script src="/public/js/register.js"></script>
     </body>
 </html>
