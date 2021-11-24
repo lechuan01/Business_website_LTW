@@ -128,8 +128,13 @@
 #logout{
   cursor: pointer;
 }
-
-
+.row my-5{
+  height: 100px;
+}
+/* }
+.col-lg-4 {
+  height: 100px;
+} */
 /* .go-to-home-page {
   display: flex;
   justify-content: center;

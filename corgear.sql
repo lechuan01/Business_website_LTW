@@ -248,7 +248,7 @@ COMMIT;
 
 
 ALTER TABLE `product` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
-
+ALTER TABLE `blog` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
 select * from `product`;
 
 
