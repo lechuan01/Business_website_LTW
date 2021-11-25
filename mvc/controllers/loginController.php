@@ -20,13 +20,15 @@ class loginController extends Controller{
                 $password = $row['password'];
                 $role = $row['role'];
             }
+           
             if($role == "ADM"){ //admin
-                if ($password_input == $password) {
+                if (password_verify($password_input, $password)) {
                     $_SESSION["idadmin"] = $id;
                     $_SESSION["role"] = "ADM";
-                    echo "true";
-                } else {
-                    echo 'false';
+                    echo "true/ADM";
+                } 
+                else {
+                    echo "false/null";
                     //echo "Mật khẩu không đúng";
                 }
             }
@@ -34,13 +36,14 @@ class loginController extends Controller{
                 if (password_verify($password_input, $password)) {
                     $_SESSION["id"] = $id;
                     $_SESSION["role"] = "MEM";
-                    echo "true";
+                    echo "true/MEM";
                 } else {
-                    echo 'false';
+                    echo "false/null";
                     //echo "Mật khẩu không đúng";
                 }
             }
-        } else {
+        } 
+        else {
             echo 'false';
             //echo "Số điện thoại không đúng";
         }

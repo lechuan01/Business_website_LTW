@@ -5,17 +5,18 @@ class adminController extends Controller{
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
     }
     public function show(){
-        if (isset($_SESSION["role"])) {
-            if ($_SESSION["role"] == "ADM") {
+        console_log([password_hash("admin", PASSWORD_DEFAULT), uniqid()]);
+        // if (isset($_SESSION["role"])) {
+            // if ($_SESSION["role"] == "ADM") {
                 $this->callview("admin/dashboard", [], "layoutAdmin");
-            }
-            else {
-                echo "You don't have permission to access this site";
-            }
-        }
-        else {
-            echo "You don't have permission to access this site";
-        }
+            // }
+            // else {
+            //     echo "You don't have permission to access this site";
+            // }
+        // }
+        // else {
+        //     echo "You don't have permission to access this site";
+        // }
     }
     public function product(){
         $listProduct = $this->AdminProductDB->getAll();
