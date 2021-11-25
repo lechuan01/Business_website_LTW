@@ -11,7 +11,7 @@
         <div class="img-display">
             <div class="img-showcase">
                 <?php foreach($data['detail'] as $key=> $value) { if($key==0) continue;?>
-                <img src="/public/images/<?=$value['image']?>" alt="">
+                <img src="/public/upload/products/<?=$value['image']?>" alt="">
                 <?php } ?>
             </div>
         </div>
@@ -19,7 +19,7 @@
             <?php foreach($data['detail'] as $key=> $value) { if($key==0) continue;?>
             <div class="img-item">
                 <a data-id="<?= $key?>">
-                    <img src="/public/images/<?=$value['image']?>" alt="">
+                    <img src="/public/upload/products/<?=$value['image']?>" alt="">
                 </a>
             </div>
             <?php } ?>

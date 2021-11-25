@@ -78,7 +78,7 @@
                     <td><?php echo number_format($item["price"], 0, "", ","); ?></td>
                     <td>
                         <button type="button" class="btn btn-warning" data-id="<?php echo $item["id"]; ?>">Sửa</button>
-                        <button type="button" class="btn btn-danger" data-id="<?php echo $item["id"]; ?>">Xóa</button>
+                        <button type="button" class="btn btn-danger delete-product" onclick="confirm('Băn chắc chắn muốn xóa?')" data-id="<?php echo $item["id"]; ?>">Xóa</button>
                     </td>
                 </tr>
                 <?php } ?>
@@ -88,3 +88,22 @@
 
     </div>
 </div>
+
+<script src="/public/js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.delete-product').click(function() {
+            const id = $(this).data('id'); // product id
+            $.ajax({
+                type: 'post',
+                url: "/admin/productDelete",
+                data: { id: id },
+                success: function(res) {
+                    if (res) {
+                        window.location.href = "/admin/product";
+                    }
+                }
+            });
+        });
+    });
+</script>

@@ -128,7 +128,16 @@
 #logout{
   cursor: pointer;
 }
-
+@media screen and (max-width: 430px) {
+  .login-center {
+    width: 100%;
+  }
+  .login-center form {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+  }
+}
 
 /* .go-to-home-page {
   display: flex;

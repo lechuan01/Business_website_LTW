@@ -23,6 +23,7 @@ class loginController extends Controller{
             if($role == "ADM"){ //admin
                 if ($password_input == $password) {
                     $_SESSION["idadmin"] = $id;
+                    $_SESSION["role"] = "ADM";
                     echo "true";
                 } else {
                     echo 'false';
@@ -32,6 +33,7 @@ class loginController extends Controller{
             else{
                 if (password_verify($password_input, $password)) {
                     $_SESSION["id"] = $id;
+                    $_SESSION["role"] = "MEM";
                     echo "true";
                 } else {
                     echo 'false';

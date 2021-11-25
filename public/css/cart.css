@@ -17,9 +17,12 @@
   background: none;
 }
 .cart-item-container {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
   width: 70%;
   margin-right: 20px;
+  height: max-content;
 }
 
 
@@ -101,7 +104,6 @@
   background: #fff;
   border-radius: 8px;
   transition: all 0.5s;
-  padding-left: 10px;
   padding-right: 10px;
 }
 .cart-item-info .product-info {
@@ -117,6 +119,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 10px;
 }
 .cart-item-info .product-info .cart-des-item p {
   margin: 0;
@@ -188,16 +191,21 @@
   margin: 0;
   padding: 0;
 }
-
-@media screen and (max-width: 947px) {
-  .cart-item-info {
-    width: 500px;
+@media screen and (max-width: 1199px) {
+  .cart-and-summary {
+    display: flex;
+    flex-direction: column;
   }
-  .cart-item-info .product-info .cart-des-item {
-    width: 130px;
+  .cart-and-summary .cart-item-container, 
+  .cart-and-summary .summary {
+    width: 100%;
+  }
+  .cart-item-container {
+    padding-bottom: 20px;
   }
 }
-@media screen and (max-width: 841px) {
+
+/* @media screen and (max-width: 841px) {
   .cart-item-info {
     width: 400px;
   }
@@ -207,8 +215,8 @@
   .cart-item-info .total-price {
     display: none;
   }
-}
-@media screen and (max-width: 756px) {
+} */
+/* @media screen and (max-width: 756px) {
   .cart-and-summary {
     display: block;
   }
@@ -229,11 +237,11 @@
     width: 80%;
     margin: 0 auto;
   }
-}
+} */
 @media screen and (max-width: 645px) {
   .cart-and-summary .cart-item-container .cart-item-info {
     position: relative;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
   .cart-and-summary .cart-item-container .cart-item-info .total-price {
@@ -246,19 +254,23 @@
     position: absolute;
     left: auto;
     right: 0;
-    margin: 0 auto;
-    margin-right: 10px;
-    transform: scale(0.9, 0.9);
+    transform: scale(0.6, 0.6);
+    margin-top: 10px;
+    margin-right: 0;
   }
   .cart-and-summary .cart-item-container .cart-item-info .remove {
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-right: 5px;
   }
   .cart-and-summary .cart-item-container .cart-item-info .product-info h4 {
     font-size: 14px;
   }
   .cart-and-summary .summary {
-    width: 95%;
+    width: 100%;
     height: max-content;
+  }
+  .cart-des-item {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 485px) {
