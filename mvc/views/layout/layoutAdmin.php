@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/public/vendor/animate/animate.css">
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="/public/css/admin/app.css">
 </head>
 
 <body>
