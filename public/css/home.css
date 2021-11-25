@@ -86,3 +86,21 @@
 .banner-info .banner-info-slogan div h1:first-child {
   color: rgb(236, 240, 47);
 }
+#about {
+  padding: 0 10px;
+  padding-bottom: 10px;
+  height: 300px;
+}
+.custom-about-section {
+  position: relative;
+  background-image: url("/public/upload/ezgif.com-gif-maker.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.custom-about-section * {
+  color: #fff;
+}
+.about-content {
+  width: 50%;
+}
