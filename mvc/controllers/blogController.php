@@ -2,9 +2,9 @@
 
 class blogController extends Controller{
     public function show(){
-        // $menu = $this->callmodel("DishDB");
-        // $menu = $menu->getDB();
-        $this->callview("blog");
+        $blogs = $this->callmodel("BlogDB");
+        $blogs = $blogs->getAll();
+        $this->callview("blog",["blog"=> $blogs]);
     }
 }
 
