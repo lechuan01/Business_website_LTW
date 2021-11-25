@@ -35,12 +35,7 @@
                 </div>
 
             <div class="product-btns">
-                <button class="btn-cart"> add to cart
-                    <span><i class="fas fa-plus"></i></span>
-                </button>
-                <button type="button" class="btn-buy"> buy now
-                    <span><i class="fas fa-shopping-cart"></i></span>
-                </button>
+                <button class="btn-cart">Add to cart</button>
             </div>
 
             <div class="product-info" name="<?= $product["price"]?>">
@@ -55,8 +50,7 @@
                     </div>
                 </div>
                 <a href="#" class="product-name"><?= $product["name"]?></a>
-                <p class="product-price">$ <?= $product["price"]*1.1?></p>
-                <p class="product-price">$ <?= $product["price"]?></p>
+                <p class="product-price"><?= number_format($product["price"],0 , "", ",") ?>đ</p>
             </div>
 
             <!-- <div class="off-info">

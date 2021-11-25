@@ -1,4 +1,4 @@
-<footer class="page-footer bg-image bg-white" style="background-image: url(./public/img/services/world_pattern.svg);">
+<footer class="page-footer">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-3 py-3">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-lg-3 py-3">
-                <h5>Company</h5>
+                <h5>Trang thông tin</h5>
                 <ul class="footer-menu">
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Career</a></li>
@@ -24,14 +24,14 @@
                 </ul>
             </div>
             <div class="col-lg-3 py-3">
-                <h5>Contact Us</h5>
-                <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-                <a href="#" class="footer-link">+00 1122 3344 5566</a>
-                <a href="#" class="footer-link">seogram@temporary.com</a>
+                <h5>Liên hệ với chúng tôi</h5>
+                <p>123, đường Lý Thường Kiệt, Quận 5, Thành phố Hồ Chí Minh</p>
+                <a href="#" class="footer-link">(+84) 0123 456 789</a>
+                <a href="#" class="footer-link">sales@corgear.vn</a>
             </div>
             <div class="col-lg-3 py-3">
-                <h5>Newsletter</h5>
-                <p>Get updates, news or events on your mail.</p>
+                <h5>Nhận thông báo mới</h5>
+                <p>Luôn cập nhật thông tin mới nhất từ chúng tôi</p>
                 <form action="#">
                     <input type="text" class="form-control" placeholder="Enter your email..">
                     <button type="submit" class="btn btn-success btn-block mt-2">Subscribe</button>
@@ -39,6 +39,6 @@
             </div>
         </div>
 
-        <p class="text-center" id="copyright">Copyright &copy; 2021. Develope by NCBN</p>
+        <p class="text-center" id="copyright">Develope by NCBN</p>
     </div>
 </footer>

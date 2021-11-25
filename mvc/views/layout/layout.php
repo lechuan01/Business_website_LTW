@@ -22,7 +22,7 @@
 </head>
 
     <body>
-        <div class="back-to-top"></div>
+        <!-- <div class="back-to-top"></div> -->
         <?php require "./mvc/views/partials/header.php"; ?>
         
         <div class="main-container">

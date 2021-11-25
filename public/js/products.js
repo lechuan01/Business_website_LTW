@@ -13,20 +13,20 @@ $(document).ready(function () {
             }
         });
     });
-    $(".btn-buy").click(function (e) {
-        //console.log(e.target.name);
-        $.ajax({
-            url: "/product/Store",
-            method: "GET",
-            data: {
-                "id": e.target.parentNode.parentNode.id
-            },
-            success: function (data) {
-                $('#quantity-product').text(data);
-            }
-        });
-        location.href = "/cart";
-    })
+    // $(".btn-buy").click(function (e) {
+    //     //console.log(e.target.name);
+    //     $.ajax({
+    //         url: "/product/Store",
+    //         method: "GET",
+    //         data: {
+    //             "id": e.target.parentNode.parentNode.id
+    //         },
+    //         success: function (data) {
+    //             $('#quantity-product').text(data);
+    //         }
+    //     });
+    //     location.href = "/cart";
+    // })
     $('.product-img, .product-name').click(function (e) {
         location.href = "./product/productDetail?id=" + e.target.parentNode.parentNode.id;
     });

@@ -11,7 +11,7 @@
         <div class="img-display">
             <div class="img-showcase">
                 <?php foreach($data['detail'] as $key=> $value) { if($key==0) continue;?>
-                <img src="/public/images/<?=$value['image']?>" alt="shoe image">
+                <img src="/public/images/<?=$value['image']?>" alt="">
                 <?php } ?>
             </div>
         </div>
@@ -19,7 +19,7 @@
             <?php foreach($data['detail'] as $key=> $value) { if($key==0) continue;?>
             <div class="img-item">
                 <a data-id="<?= $key?>">
-                    <img src="/public/images/<?=$value['image']?>" alt="shoe image">
+                    <img src="/public/images/<?=$value['image']?>" alt="">
                 </a>
             </div>
             <?php } ?>
@@ -40,7 +40,7 @@
 
         <div class="product-price">
             <!-- <p class="last-price">Old Price: <span>$257.00</span></p> -->
-            <p class="new-price">Giá: <span><?= $data['detail'][0]['price']?> Đ</span></p>
+            <p class="new-price"><span><?= number_format($data['detail'][0]['price'], 0, "", ",") ?>đ</span></p>
         </div>
 
         <div class="product-detail">
@@ -53,8 +53,8 @@
             </ul>
         </div>
 
-        <div class="" id="<?= $data['detail'][0]['id']?>">
-            <button id="submitbtn" class="btn btn-danger purchase-info" >Thêm vào giỏ hàng <i class="fas fa-shopping-cart"></i></button>
+        <div class="purchase-info" id="<?= $data['detail'][0]['id']?>">
+            <button id="submitbtn" class="btn btn-danger purchase-info-btn">Thêm vào giỏ hàng <i class="fas fa-shopping-cart"></i></button>
         </div>
     </div>
 </div>
