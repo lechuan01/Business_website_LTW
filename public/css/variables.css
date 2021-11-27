@@ -17,6 +17,11 @@
   --carribean-green: #40c9a2;
   --gray: #ededed;
 }
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;

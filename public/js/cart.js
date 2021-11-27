@@ -1,52 +1,52 @@
-$(document).ready(function() {
+$(document).ready(function () {
     TotalPrice();
-    $('.change-qty-btn').click(function(e){
-        update(e.target.parentNode.id,e.target.innerHTML);
+    $('.change-qty-btn').click(function (e) {
+        update(e.target.parentNode.id, e.target.innerHTML);
     })
-    function update(id,option){
+    function update(id, option) {
         // var x = $("#namess").val();
         // var y = $('#sdt').val();
         // $("#"+dishname).val(Number($("#"+dishname).val())+1);
-        if(option=='-'){
-            if($("#"+id).children('input').val() == "1") return;
+        if (option == '-') {
+            if ($("#" + id).children('input').val() == "1") return;
             $.ajax({
-                url:"/cart/ReduceQuantity",
+                url: "/cart/ReduceQuantity",
                 method: "GET",
-                data:{
-                "id": id
+                data: {
+                    "id": id
                 },
-                success:function(data){
-                    result=JSON.parse(data);
-                    $("#"+id).children('input').val(result[0]);
-                    $("#"+id+"Price").text(result[1]*result[0]);
+                success: function (data) {
+                    result = JSON.parse(data);
+                    $("#" + id).children('input').val(result[0]);
+                    $("#" + id + "Price").text(result[1] * result[0]);
                     TotalPrice();
                 }
             });
         }
-        else{
+        else {
             $.ajax({
-                url:"/cart/IncreaseQuantity",
+                url: "/cart/IncreaseQuantity",
                 method: "GET",
-                data:{
-                "id": id
+                data: {
+                    "id": id
                 },
-                success:function(data){
-                    result=JSON.parse(data);
-                    $("#"+id).children('input').val(result[0]);
-                    $("#"+id+"Price").text(result[1]*result[0]);
+                success: function (data) {
+                    result = JSON.parse(data);
+                    $("#" + id).children('input').val(result[0]);
+                    $("#" + id + "Price").text(result[1] * result[0]);
                     TotalPrice();
                 }
             });
         }
-        
-    }
-    function TotalPrice(){
-        var n =$(".total-price").length, x=0;
 
-        for(var i = 0;i< n; i++){
+    }
+    function TotalPrice() {
+        var n = $(".total-price").length, x = 0;
+
+        for (var i = 0; i < n; i++) {
             x += parseInt($(".total-price").eq(i).text());
         }
-        x = Math.round((x*1.1) * 100)/100;
+        x = Math.round((x * 1.1) * 100) / 100;
 
         $('.total-number').text(x);
         // $.ajax({
@@ -57,24 +57,25 @@ $(document).ready(function() {
         //   }
         // });
     }
-    
-    $('.remove').click(function(e){
+
+    $('.remove').click(function (e) {
         deletedish(e.target.name);
     })
-    function deletedish(id){
+    function deletedish(id) {
         $.ajax({
-            url:"/cart/RemoveItem",
+            url: "/cart/RemoveItem",
             method: "GET",
-            data:{
-            "id": id
+            data: {
+                "id": id
             },
-            success:function(data){
-                if($("#quantity-product").html() == "1"){location.reload(); return;}
+            success: function(res) {
+                location.reload();
             }
         });
-        $(".payment-info:first").children("p:last").html(Number($("#quantity-product").html())-1);
-        $("#quantity-product").html(Number($("#quantity-product").html())-1);
-        $(".cart-item-info[name="+id+"]").remove();
-        TotalPrice();
+        // if ($("#quantity-product").html() == "1") { location.reload(); return; }
+        // $(".payment-info:first").children("p:last").html(Number($("#quantity-product").html()) - 1);
+        // $("#quantity-product").html(Number($("#quantity-product").html()) - 1);
+        // $(".cart-item-info[name=" + id + "]").remove();
+        // TotalPrice();
     }
 })

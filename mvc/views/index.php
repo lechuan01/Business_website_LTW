@@ -2,7 +2,7 @@
     <div class="home-banner">
         <div class="slideshow-container">
             <div class="mySlides img-fade">
-                <img src="./public/upload/g15.png">
+                <img src="./public/upload/d9mrd0c-d95eeca4-1d26-491f-9002-d8167994077c.png">
                 <!-- <div class="text">Caption Text</div> -->
             </div>
 
@@ -59,7 +59,7 @@
                     <div class="body">
                         <h5 class="text-secondary">SEO Consultancy</h5>
                         <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <a href="service.html" class="btn btn-primary">Read More</a>
+                        <!-- <a href="service.html" class="btn btn-primary">Read More</a> -->
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="body">
                         <h5 class="text-secondary">Content Marketing</h5>
                         <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <a href="service.html" class="btn btn-primary">Read More</a>
+                        <!-- <a href="service.html" class="btn btn-primary">Read More</a> -->
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     <div class="body">
                         <h5 class="text-secondary">Keyword Research</h5>
                         <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <a href="service.html" class="btn btn-primary">Read More</a>
+                        <!-- <a href="service.html" class="btn btn-primary">Read More</a> -->
                     </div>
                 </div>
             </div>
@@ -92,35 +92,34 @@
 </div> <!-- .page-section -->
 
 <div class="page-section" id="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 py-3 wow fadeInUp" style="text-align: justify;">
-                <span class="subhead">Về chúng tôi</span>
-                <h2 class="title-section">Công ty phân phối sản phẩm Corsair hàng đầu Việt Nam</h2>
-                <div class="divider"></div>
+    <div class="row align-items-center custom-about-section">
+        <div class="wow fadeInUp about-content" style="text-align: justify;">
+            <span class="subhead">Về chúng tôi</span>
+            <h2 class="title-section">Công ty phân phối sản phẩm Corsair hàng đầu Việt Nam</h2>
+            <div class="divider"></div>
 
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
-                <a href="about.html" class="btn btn-primary mt-3">Read More</a>
-            </div>
-            <div class="col-lg-6 py-3 wow fadeInRight">
+            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+            <!-- <a href="about.html" class="btn btn-primary mt-3">Read More</a> -->
+        </div>
+        <!-- <div class="col-lg-6 py-3 wow fadeInRight">
                 <div class="img-fluid py-3 text-center">
                     <img src="./public/img/about_frame.png" alt="">
                 </div>
-            </div>
-        </div>
-    </div> <!-- .container -->
+            </div> -->
+    </div>
+
 </div> <!-- .page-section -->
 
 <div class="page-section bg-light">
     <div class="container">
-        <div class="text-center wow fadeInUp">
-            <!-- <div class="subhead">Dịch vụ</div> -->
+        <!-- <div class="text-center wow fadeInUp">
+            <div class="subhead">Dịch vụ</div>
             <h2 class="title-section">Dịch vụ</h2>
             <div class="divider mx-auto"></div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
                 <div class="features">
                     <div class="header mb-3">
@@ -193,7 +192,7 @@
                     <p>We analyse your website's structure, internal architecture & other key</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div> <!-- .container -->
 </div> <!-- .page-section -->

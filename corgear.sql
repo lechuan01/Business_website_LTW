@@ -248,7 +248,7 @@ COMMIT;
 
 
 ALTER TABLE `product` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
-
+ALTER TABLE `blog` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
 select * from `product`;
 
 
@@ -270,6 +270,30 @@ SELECT image FROM `product_image` WHERE product_id = 10001;
 
 AS A,`product_image` AS B WHERE A.id = B.product_id;
 
+INSERT INTO `blog` VALUES ('1111','2021-11-24','Axium Fox',
+  'Sự kiện Epic Black Friday 2021 chính thức bắt đầu, mời các bạn quẹo lựa “loot” game',
+  'Epic bắt đầu sự kiện game giảm giá Black Friday 2021, mời các bạn vào săn game sale cuối năm.
+
+    Đến hẹn lại lên, lại một mùa sale Black Friday nữa của Epic Games Store diễn ra, mang lại nhiều giá giảm siêu hời cho các bạn game thủ có nhu cầu quẹo lựa mua game cuối năm. Đợt Black Friday lần này sẽ có mức giá giảm lên tới 75% tùy game, và kéo dài cho tới ngày 30/11 mới kết thúc, một khoảng thời gian dư dả cho các bạn tha hồ mà lựa game hoặc… tích lúa. ',
+  'xlarge-1068x580.jpg');
+INSERT INTO `blog` VALUES ('2222','2021-11-24','Thúy Ngân',
+  'Trung Quốc sẽ khó nhập máy móc sản xuất chip tiên tiến trong nhiều năm',
+  'Vì chiến tranh thương mại Mỹ – Trung đang căng thẳng nên nhà máy sản xuất tại Trung Quốc phải mất vài năm nữa mới có được những trang thiết bị hiện đại hơn.
+
+    CEO Lee Seok-Hee của hãng sản xuất RAM Hàn Quốc SK Hynix vừa mới cho biết công ty sẽ tùy cơ ứng biến dựa theo tình hình chiến tranh thương mại giữa Hoa Kỳ và Trung Quốc, nhất là về việc lắp đặt các trang thiết bị máy móc sản xuất chip tiên tiến ở các nhà máy tại Trung Quốc. SK Hynix là 1 trong những nhà máy sản xuất môđun RAM lớn nhất thế giới, và hiện họ đang có kế hoạch nâng cấp các nhà máy với công cụ EUV (extreme ultraviolet light) để tạo ra những sản phẩm xịn sò hơn.',
+  'chip1068x580.jpg');
+INSERT INTO `blog` VALUES ('3333','2021-11-24','Thiên Bảo',
+  'Huawei ra mắt đồng hồ thông minh Watch GT 3 tại Việt Nam',
+  'Đồng hồ thông minh Huawei Watch GT 3 sở hữu thiết kế trẻ trung và hiện đại, cùng với đó là các tính năng hiện đại giúp nâng cao trải nghiệm người dùng.
+
+  Huawei Việt Nam vừa mới ra mắt dòng đồng hồ thông minh Watch GT 3 gồm 2 phiên bản 46mm, 42mm và Watch GT Runner trang bị nền tảng HarmonyOS 2.1. Huawei Watch GT 3 có thiết kế trẻ trung, giao diện hiện đại, giúp bạn dễ dàng thể hiện cá tính và phong cách cá nhân. Thời lượng pin lên đến 14 ngày kết hợp với các tính năng tiên tiến như định vị 5 vệ tinh giúp cải thiện trải nghiệm của người dùng.',
+  'Watch.jpg');
+INSERT INTO `blog` VALUES ('4444','2021-11-23','Hoài Nam',
+  'Top 8 tựa game nhập vai hay nhất theo phong cách Steampunk',
+  'Cái hay của game nhập vai là thế giới trong game có thể được lấy cảm hứng từ nhiều thứ khác nhau: từ vùng đất fantasy đầy huyền bí, cho đến những tòa nhà chọc trời công nghệ cao trong tương lai, đủ mọi thể loại cho bạn lựa chọn. Trong đó, phong cách steampunk thường không được nhắc đến nhiều cho lắm, nhưng một khi đã bước chân vào thế giới game đó rồi thì nhiều khi quên lối về luôn các bạn ạ.
+
+    Steampunk kết hợp các bối cảnh lịch sử với các máy móc công nghiệp, máy hơi nước thay vì những thiết bị công nghệ hiện đại như ngày nay. Đôi lúc, nó cũng pha lẫn một chút yếu tố fantasy trong đó để tăng thêm phần thú vị. Sau đây là top 8 tựa game nhập vai hay nhất theo phong cách Steampunk mà các bạn nên trải nghiệm thử nhé.',
+  'Game-nhap-vai-Steampunk-9-1.jpg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
