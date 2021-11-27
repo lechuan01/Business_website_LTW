@@ -63,5 +63,13 @@
     <h2>Mô tả sản phẩm</h2>
 </div>
 <div class="card product-review">
-    <h2>Nhận xét</h2>    
+    <h2>Nhận xét</h2> 
+    <div class="review-container">
+        <div>
+            <h4>Hoài Nam</h4> <p>Sản phẩm đẹp quá</p>
+        </div>
+        <div>
+            <h4>Thúy Ngân</h4> <p>Ủng hộ shop</p>
+        </div>
+    </div>   
 </div>

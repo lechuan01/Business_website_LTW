@@ -27,7 +27,7 @@ use corgear;
 --
 -- Table structure for table `accounts`
 --
-
+select * from `accounts`;
 CREATE TABLE `accounts` (
   `id` varchar(255) NOT NULL,
   `full_name` varchar(255) NOT NULL,
