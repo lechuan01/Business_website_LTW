@@ -5,7 +5,7 @@ class adminController extends Controller{
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
     }
     public function show(){
-        console_log([password_hash("admin", PASSWORD_DEFAULT), uniqid()]);
+        // console_log([password_hash("admin", PASSWORD_DEFAULT), uniqid()]);
         // if (isset($_SESSION["role"])) {
             // if ($_SESSION["role"] == "ADM") {
                 $this->callview("admin/dashboard", [], "layoutAdmin");
@@ -57,6 +57,46 @@ class adminController extends Controller{
             }
             else {
                 echo false;
+            }
+        }
+    }
+    public function productEdit($params) {
+        // Get id from client
+        $id = $params["id"];
+        $products = $this->AdminProductDB->getbyID($id);
+        if ($products) {
+            echo json_encode($products);
+        }
+        else {
+            echo json_encode(404);
+        }
+    }
+    public function productUpdate($params) {
+        if (isset($_POST["submit"])) {
+            $id = $params["id"];
+            $name = $_POST["name"];
+            $specs = $_POST["specs"];
+            $price = $_POST["price"];
+            $qty = $_POST["qty"];
+            $category = $_POST["category"];
+            $thumnail = null;
+            // if (isset($_FILES["thumnail"])) {
+            //     $file_name = $_FILES['thumnail']['name'];
+            //     $thumnail = $file_name;
+            //     $file_tmp = $_FILES['thumnail']['tmp_name'];
+            //     move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
+            // }
+            // if (isset($_FILES["product_image"])) {
+            //     $image_array = [];
+            //     foreach($_FILES["product_image"]["name"] as $key => $val) {
+            //         array_push($image_array, $_FILES["product_image"]["name"][$key]);
+            //         move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
+            //     }
+            // }
+            
+            $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, null, null);
+            if ($result) {
+                header("Location: /admin/product");
             }
         }
     }

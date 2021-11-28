@@ -57,7 +57,21 @@ class AdminProductDB extends DB
         }
         return $check;
     }
+    function updateById($id, $name, $specs, $price, $qty, $category, $file_name, $image_array) {
+        if ($file_name) {
+            $sql = "UPDATE product SET price = '$price', specs = '$specs', `name` = '$name', category = '$category', quantity = '$qty', thumnail = '$file_name' where id = '$id'";
+            $res = $this->connect->query($sql);
+        }
+        else {
+            $sql = "UPDATE product SET price = '$price', specs = '$specs', `name` = '$name', category = '$category', quantity = '$qty' where id = '$id'";
+            $res = $this->connect->query($sql);
+        }
 
+        if ($res) {
+            return true;
+        }
+        return false;
+    }
     function deleteById($id) {
         $sql = "DELETE FROM product WHERE id = '$id'";
         $res = $this->connect->query($sql);
