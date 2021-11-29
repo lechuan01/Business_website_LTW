@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Gaming</title>
+    <title>Corgear Dashboard</title>
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
 
@@ -15,13 +15,18 @@
     <link rel="stylesheet" href="/public/css/dataTables.bootstrap5.min.css">
 
     <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="/public/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="/public/fontawesome/css/all.min.css"> -->
 
     <!-- ANIMATION -->
-    <link rel="stylesheet" href="/public/vendor/animate/animate.css">
+    <!-- <link rel="stylesheet" href="/public/vendor/animate/animate.css"> -->
+
+    <!-- DATA TABLE -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/public/css/admin/app.css">
+
 </head>
 
 <body>

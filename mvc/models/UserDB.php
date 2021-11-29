@@ -26,7 +26,7 @@ class UserDB extends DB{
     }
 
     function getById($id){
-        $sql = "SELECT * FROM `accounts` WHERE phone_number = ".$phoneNumber.";";
+        $sql = "SELECT * FROM `accounts` WHERE phone_number = ".$id.";";
         return mysqli_query($this->connect, $sql);
     }
     

@@ -38,6 +38,7 @@ class loginController extends Controller{
                     $_SESSION["role"] = "MEM";
                     echo "true/MEM";
                 } else {
+
                     echo "false/null";
                     //echo "Mật khẩu không đúng";
                 }

@@ -23,6 +23,7 @@
                 </a>
             </div>
             <?php } ?>
+
         </div>
     </div>
     <!-- card right -->
@@ -63,5 +64,19 @@
     <p><?php echo $data['detail'][0]['specs']; ?></p>
 </div>
 <div class="card product-review">
-    <h2>Nhận xét</h2>    
+    <h2>Nhận xét</h2> 
+    <div id='review'>
+        <?php $mark=0; if(!empty($_SESSION['id']))$mark=1;
+        foreach($data['review'] as $key => $value) {
+            if(!empty($_SESSION['id'])) if($value['member_id']==$_SESSION['id']) $mark = 0; ?>
+        <div>
+            <label><?= $value['full_name']?></label> 
+            <input type="text" value="<?= $value['comments']?>" disabled><br>
+        </div>
+        <?php } ?>
+        <?php if(!empty($_SESSION['id']) && $mark == 1){ ?> 
+            <input id="newcontent" type="text" placeholder="Thêm nhận xét">
+            <input id="btn-newreivew" type="button" value="Thêm"> <?php }?>
+    </div>   
 </div>
+
