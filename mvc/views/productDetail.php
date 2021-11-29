@@ -75,8 +75,11 @@
         </div>
         <?php } ?>
         <?php if(!empty($_SESSION['id']) && $mark == 1){ ?> 
-            <input id="newcontent" type="text" placeholder="Thêm nhận xét">
-            <input id="btn-newreivew" type="button" value="Thêm"> <?php }?>
+            <div class="write-new-review">
+                <h5>Viết nhận xét</h5>
+                <input id="newcontent" type="text" placeholder="Thêm nhận xét">
+                <input id="btn-newreivew" class="btn btn-primary" type="button" value="Thêm"> <?php }?>
+            </div>
     </div>   
 </div>
 

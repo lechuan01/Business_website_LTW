@@ -2,6 +2,9 @@
     <h1 class="lg-title">Tất cả sản phẩm</h1>
     <div class="category-container">
         <div class="product-category">
+            <div class="all-product">
+                <p>Tất cả</p>
+            </div>
             <div class="keyboard">
                 <img src="/public/upload/corsair-k65-rgb-mini.jpeg" alt="">
                 <p>Keyboard</p>

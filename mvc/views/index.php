@@ -2,18 +2,18 @@
     <div class="home-banner">
         <div class="slideshow-container">
             <div class="mySlides img-fade">
-                <img src="./public/upload/d9mrd0c-d95eeca4-1d26-491f-9002-d8167994077c.jpg">
+                <img src="./public/images/d9mrd0c-d95eeca4-1d26-491f-9002-d8167994077c.jpg">
                 <!-- <div class="text">Caption Text</div> -->
             </div>
 
             <div class="mySlides img-fade">
 
-                <img src="./public/upload/ban-phim-co-corsair-k65-mini.jpg">
+                <img src="./public/images/banner-3.jpg">
                 <!-- <div class="text">Caption Two</div> -->
             </div>
 
             <div class="mySlides img-fade">
-                <img src="./public/upload/Corsair-M65-RGB-Elite.jpg">
+                <img src="./public/images/Corsair-M65-RGB-Elite.jpg">
                 <!-- <div class="text">Caption Three</div> -->
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -49,46 +49,6 @@
         </script>
     </div>
 
-    <div class="page-container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card-service wow fadeInUp">
-                    <div class="header">
-                        <img src="./public/img/services/service-1.svg" alt="">
-                    </div>
-                    <div class="body">
-                        <h5 class="text-secondary">SEO Consultancy</h5>
-                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <!-- <a href="service.html" class="btn btn-primary">Read More</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card-service wow fadeInUp">
-                    <div class="header">
-                        <img src="./public/img/services/service-2.svg" alt="">
-                    </div>
-                    <div class="body">
-                        <h5 class="text-secondary">Content Marketing</h5>
-                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <!-- <a href="service.html" class="btn btn-primary">Read More</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card-service wow fadeInUp">
-                    <div class="header">
-                        <img src="./public/img/services/service-3.svg" alt="">
-                    </div>
-                    <div class="body">
-                        <h5 class="text-secondary">Keyword Research</h5>
-                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <!-- <a href="service.html" class="btn btn-primary">Read More</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- .container -->
 </div> <!-- .page-section -->
 
 <div class="page-section" id="about">

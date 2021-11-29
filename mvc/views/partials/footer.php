@@ -16,11 +16,9 @@
             <div class="col-lg-3 py-3">
                 <h5>Trang thông tin</h5>
                 <ul class="footer-menu">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Advertise</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="/product">Sản phẩm</a></li>
+                    <li><a href="/blog">Tin tức</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 py-3">
