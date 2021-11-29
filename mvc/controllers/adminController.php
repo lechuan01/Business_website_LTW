@@ -80,21 +80,21 @@ class adminController extends Controller{
             $qty = $_POST["qty"];
             $category = $_POST["category"];
             $thumnail = null;
-            // if (isset($_FILES["thumnail"])) {
-            //     $file_name = $_FILES['thumnail']['name'];
-            //     $thumnail = $file_name;
-            //     $file_tmp = $_FILES['thumnail']['tmp_name'];
-            //     move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
-            // }
-            // if (isset($_FILES["product_image"])) {
-            //     $image_array = [];
-            //     foreach($_FILES["product_image"]["name"] as $key => $val) {
-            //         array_push($image_array, $_FILES["product_image"]["name"][$key]);
-            //         move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
-            //     }
-            // }
+            $image_array = [];
+            if (isset($_FILES["thumnail"])) {
+                $file_name = $_FILES['thumnail']['name'];
+                $thumnail = $file_name;
+                $file_tmp = $_FILES['thumnail']['tmp_name'];
+                move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
+            }
+            if (isset($_FILES["product_image"])) {
+                foreach($_FILES["product_image"]["name"] as $key => $val) {
+                    array_push($image_array, $_FILES["product_image"]["name"][$key]);
+                    move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
+                }
+            }
             
-            $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, null, null);
+            $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, $thumnail, $image_array);
             if ($result) {
                 header("Location: /admin/product");
             }

@@ -65,6 +65,25 @@ class AdminProductDB extends DB
         else {
             $sql = "UPDATE product SET price = '$price', specs = '$specs', `name` = '$name', category = '$category', quantity = '$qty' where id = '$id'";
             $res = $this->connect->query($sql);
+            if ($res) {
+                $sql3 = "SELECT `image` FROM product_image WHERE product_id = '$id'";
+                $curr = $this->connect->query($sql3);
+                $result = [];
+                while ($row = mysqli_fetch_array($curr, MYSQLI_TYPE_CHAR)) {
+                    array_push($result, $row);
+                }
+                
+                if (count($image_array) > 0) {
+                    $Str = '';
+                    for ($i = 0; $i < count($image_array); $i++) {
+                        // console_log($result[$i]['image']);
+                        $Str = $result[$i]['image'];
+                        console_log($Str);
+                        $sql2 = "UPDATE `product_image` SET `image` =  '$image_array[$i]' WHERE product_id = ". $id. " and `image` = '$Str'";
+                        $res = $this->connect->query($sql2);
+                    }
+                }
+            }
         }
 
         if ($res) {
