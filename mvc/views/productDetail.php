@@ -60,6 +60,7 @@
 </div>
 <div class="card product-review">
     <h2>Mô tả sản phẩm</h2>
+    <p><?php echo $data['detail'][0]['specs']; ?></p>
 </div>
 <div class="card product-review">
     <h2>Nhận xét</h2>    

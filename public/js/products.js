@@ -34,7 +34,7 @@ $(document).ready(function () {
     $('.mouse').click(() => filterProduct('mouse'));
     $('.headphone').click(() => filterProduct('headphone'));
     $('.case').click(() => filterProduct('case'));
-    $('.lg-title').click(() => {
+    $('.all-product').click(() => {
         $('.product-items').children().css('display', 'block');
     });
 
