@@ -60,7 +60,7 @@
 
     </div>
 </div>
-<script>
+<!-- <script>
     $(document).ready(function () {
     
         $('#img-aq').click(function () {
@@ -69,4 +69,4 @@
         
 
     });
-</script>
+</script> -->

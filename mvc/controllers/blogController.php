@@ -6,9 +6,11 @@ class blogController extends Controller{
         $blogs = $blogs->getAll();
         $this->callview("blog",["blog"=> $blogs]);
     }
-    public function detail($title){
+    public function detail($param){
+        console_log($param['title']);
         $blogs = $this->callmodel("BlogDB");
-        $blogs = $blogs->getAll();
+        $blogs = $blogs->getById($param['title']);
+        console_log($blogs);
         $this->callview("blogDetail",["blog"=> $blogs]);
     }
 }
