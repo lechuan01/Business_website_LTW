@@ -2,9 +2,6 @@
     <h1 class="lg-title">Tất cả sản phẩm</h1>
     <div class="category-container">
         <div class="product-category">
-            <div class="all-product">
-                <p>Tất cả</p>
-            </div>
             <div class="keyboard">
                 <img src="/public/upload/corsair-k65-rgb-mini.jpeg" alt="">
                 <p>Keyboard</p>
@@ -42,44 +39,34 @@
                     <img src="/public/upload/products/<?= $product["thumnail"] ?>" alt="product image">
                 </div>
 
-            <div class="product-btns">
-                <button class="btn-cart"> add to cart
-                    <span><i class="fas fa-plus"></i></span>
-                </button>
-                <button class="btn-buy"> buy now
-                    <span><i class="fas fa-shopping-cart"></i></span>
-                </button>
-            </div>
-
-            <div class="product-info" name="<?= $product["price"]?>">
-                <div class="product-info-top rating">
-                    <h2 class="sm-title"><?= $product["category"]?></h2>
-
-                    <div class="rating">
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="fas fa-star"></i></span>
-                        <span><i class="far fa-star"></i></span>
-                    </div>
+                <div class="product-btns">
+                    <button class="btn-cart">Add to cart</button>
                 </div>
-                <a href="#" class="product-name"><?= $product["name"]?></a>
-                <p class="product-price">$ <?= $product["price"]*1.1?></p>
-                <p class="product-price">$ <?= $product["price"]?></p>
-            </div>
 
-            <!-- <div class="off-info">
+                <div class="product-info" name="<?= $product["price"] ?>">
+                    <div class="product-info-top rating">
+                        <h2 class="sm-title"><?= $product["category"] ?></h2>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name"><?= $product["name"] ?></a>
+                    <p class="product-price"><?= number_format($product["price"], 0, "", ",") ?>đ</p>
+                </div>
+
+                <!-- <div class="off-info">
                 <h2 class="sm-title">25% off</h2>
             </div> -->
-        </div>
-        <?php }?>
-
+            </div>
+        <?php } ?>
         <!-- end of single product -->
 
     </div>
-</div> <br>
-
-
+</div>
 
 <!-- <div class="product-collection">
     <div class="container">

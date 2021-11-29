@@ -24,7 +24,7 @@
                 }
                 else{
                     ?>
-                    <a href="#" id="logout" name="logout">Đăng Xuất</a>
+                    <a href="/Home" id="logout" name="logout">Đăng Xuất</a>
                     <?php
                 } 
                 ?>

@@ -43,16 +43,14 @@ CREATE TABLE `accounts` (
 --
 -- Table structure for table `belong`
 --
-
+#SELECT * FROM `accounts` WHERE id = '61a24ca06ca6f';
 CREATE TABLE `belong` (
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `quantity` int(11) DEFAULT NULL,
   `price` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `blog`
 --
@@ -117,7 +115,6 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `product_image`
 --
@@ -139,6 +136,7 @@ CREATE TABLE `review` (
   `comments` longtext NOT NULL,
   `member_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `review` VALUE(10002,1,"gất tuyệt dời","61a24ca06ca6f");
 
 --
 -- Indexes for dumped tables
@@ -230,8 +228,8 @@ ALTER TABLE `member`
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`account_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`; 
 --
 -- Constraints for table `product_image`
 --
@@ -243,15 +241,17 @@ ALTER TABLE `product_image`
 --
 ALTER TABLE `review`
   ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`member_id`) REFERENCES `member` (`account_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`member_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
-
+ALTER TABLE `review` DROP FOREIGN KEY `review_ibfk_2`; 
+ALTER TABLE `review` ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`member_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `product` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
 ALTER TABLE `blog` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
 select * from `product`;
-
-
+use corgear;
+INSERT INTO `orders` VALUES(554924326,'Đang xử lý','cash',NOW(),275000,'61a24ca06ca6f');
+INSERT INTO `belong` VALUES(554924326,10001,5,30000);INSERT INTO `belong` VALUES(554924326,10002,2,50000);
 #delete from `product` where id >0;
 insert into `product` values(10001,30000,'','CORSAIR K65 MINI BLACK','keyboard',30,'ban-phim-co-corsair-k65-mini.jpg');
 insert into `product` values(10002,50000,'','CORSAIR K63 CÓ DÂY','keyboard',30,'corsair-k63-wire.jpg');
@@ -268,7 +268,6 @@ insert into `product_image` values(10001,'switch-cua-ban-phim-corsair-k65-mini-r
 SELECT * FROM `product` WHERE id = 10001;
 SELECT image FROM `product_image` WHERE product_id = 10001;
 
-AS A,`product_image` AS B WHERE A.id = B.product_id;
 
 INSERT INTO `blog` VALUES ('1111','2021-11-24','Axium Fox',
   'Sự kiện Epic Black Friday 2021 chính thức bắt đầu, mời các bạn quẹo lựa “loot” game',

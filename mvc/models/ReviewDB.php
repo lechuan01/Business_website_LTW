@@ -1,14 +1,25 @@
 <?php
 
 class ReviewDB extends DB{
-    # thêm tài khoản người dùng mới vào csdl
-    public function InsertNewUser($id, $fullName, $password, $phoneNumber, $email, $address, $role)
+    public function Getreview($id)
     {
-        $qr = "INSERT INTO accounts VALUES('$id','$fullName','$password','$phoneNumber','$email','$address','$role')";
+        $qr = "SELECT A.*,B.`full_name` FROM `review` AS A,`accounts` AS B WHERE `product_id`= $id AND A.`member_id`=B.`id`; ";
         $result = mysqli_query($this->connect, $qr);
-        return json_encode($result);
+        $array=[];
+        while($s = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+            array_push($array,$s);
+        }
+        return $array;
     }
-    
+    public function addReview($id,$content)
+    {
+        $idcus = $_SESSION['id'];
+        $mark = rand(0,1000000000);
+        $qr = "INSERT INTO `review` VALUES($id,$mark,'$content','$idcus');";
+        echo  $qr;
+        $result = mysqli_query($this->connect, $qr);
+        return $result;
+    }
 }
 
 ?>
