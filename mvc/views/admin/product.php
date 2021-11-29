@@ -80,7 +80,7 @@
                         <td><?php echo number_format($item["price"], 0, "", ","); ?></td>
                         <td>
                             <button type="button" class="btn btn-warning edit-product" data-bs-toggle="modal" data-bs-target="#exampleModal-edit" data-id="<?php echo $item["id"]; ?>">Sửa</button>
-                            <button type="button" class="btn btn-danger delete-product" onclick="confirm('Băn chắc chắn muốn xóa?')" data-id="<?php echo $item["id"]; ?>">Xóa</button>
+                            <button type="button" class="btn btn-danger delete-product" onclick="confirm('Bạn chắc chắn muốn xóa?')" data-id="<?php echo $item["id"]; ?>">Xóa</button>
                         </td>
                     </tr>
                 <?php } ?>

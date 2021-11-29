@@ -3,6 +3,7 @@
 class adminController extends Controller{
     public function __construct() {
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
+        $this->AdminMemberDB = $this->callmodel("AdminMemberDB");
     }
     public function show(){
         // console_log([password_hash("admin", PASSWORD_DEFAULT), uniqid()]);
@@ -108,7 +109,8 @@ class adminController extends Controller{
     public function member(){
         // $menu = $this->callmodel("DishDB");
         // $menu = $menu->getDB();
-        $this->callview("admin/member", [], "layoutAdmin");
+        $members = $this->AdminMemberDB->getAll();
+        $this->callview("admin/member", ["members" => $members], "layoutAdmin");
     }
     public function blog(){
         // $menu = $this->callmodel("DishDB");
