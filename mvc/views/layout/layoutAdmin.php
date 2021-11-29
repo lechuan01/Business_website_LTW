@@ -21,7 +21,7 @@
     <!-- <link rel="stylesheet" href="/public/vendor/animate/animate.css"> -->
 
     <!-- DATA TABLE -->
-    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> -->
 
 
     <!-- CUSTOM CSS -->

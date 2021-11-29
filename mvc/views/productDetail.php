@@ -69,9 +69,9 @@
         <?php $mark=0; if(!empty($_SESSION['id']))$mark=1;
         foreach($data['review'] as $key => $value) {
             if(!empty($_SESSION['id'])) if($value['member_id']==$_SESSION['id']) $mark = 0; ?>
-        <div>
-            <label><?= $value['full_name']?></label> 
-            <input type="text" value="<?= $value['comments']?>" disabled><br>
+        <div class="card-review">
+            <h3><?= $value['full_name']?></h3>
+            <h5><?= $value['comments']?></h5>
         </div>
         <?php } ?>
         <?php if(!empty($_SESSION['id']) && $mark == 1){ ?> 

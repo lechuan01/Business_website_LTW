@@ -10,8 +10,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
--- drop database corgear;
-create database corgear;
 use corgear;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,7 +25,7 @@ use corgear;
 --
 -- Table structure for table `accounts`
 --
-select * from `accounts`;
+
 CREATE TABLE `accounts` (
   `id` varchar(255) NOT NULL,
   `full_name` varchar(255) NOT NULL,
@@ -136,11 +134,6 @@ CREATE TABLE `review` (
   `comments` longtext NOT NULL,
   `member_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-INSERT INTO `review` VALUE(10002,1,"gất tuyệt dời","61a24ca06ca6f");
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `accounts`
@@ -248,19 +241,21 @@ ALTER TABLE `review` ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`member_id`) RE
 
 ALTER TABLE `product` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
 ALTER TABLE `blog` ADD COLUMN `thumnail` VARCHAR(255) NOT NULL; 
-select * from `product`;
+
 use corgear;
-INSERT INTO `orders` VALUES(554924326,'Đang xử lý','cash',NOW(),275000,'61a24ca06ca6f');
+
 INSERT INTO `belong` VALUES(554924326,10001,5,30000);INSERT INTO `belong` VALUES(554924326,10002,2,50000);
 #delete from `product` where id >0;
 insert into `product` values(10001,30000,'','CORSAIR K65 MINI BLACK','keyboard',30,'ban-phim-co-corsair-k65-mini.jpg');
-insert into `product` values(10002,50000,'','CORSAIR K63 CÓ DÂY','keyboard',30,'corsair-k63-wire.jpg');
-insert into `product` values(10003,60000,'','Apple Headphones','headphone',60,'headphones-apple-beats-studio-red-headphones.png');
 
 insert into `product_image` values(10001,'QeAPsgjcEeKO2v8u.jpg');
 insert into `product_image` values(10001,'corsair-k65-rgb-mini-07.jpg');
 insert into `product_image` values(10001,'5510059_194111351_4354441971253318_4592268824123829596_n.jpg');
 insert into `product_image` values(10001,'switch-cua-ban-phim-corsair-k65-mini-red-sw-usb-rgb-red-switch.jpg');
+
+ALTER TABLE `product`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+
 
 #insert into `product_image` values(10003,'headphones-apple-beats-studio-red-headphones.png');
 

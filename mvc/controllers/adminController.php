@@ -30,14 +30,12 @@ class adminController extends Controller{
             $price = $_POST["price"];
             $qty = $_POST["qty"];
             $category = $_POST["category"];
-
             if (isset($_FILES["thumnail"])) {
                 $file_name = $_FILES['thumnail']['name'];
                 $file_tmp = $_FILES['thumnail']['tmp_name'];
                 move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
                 $image_array = [];
                 foreach($_FILES["product_image"]["name"] as $key => $val) {
-                    //TODO: INSERT TO DATABASE HERE
                     array_push($image_array, $_FILES["product_image"]["name"][$key]);
                     move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
                 }

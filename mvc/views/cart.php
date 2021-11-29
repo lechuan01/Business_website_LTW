@@ -9,7 +9,7 @@
             <?php foreach($_SESSION["Cart"] as $key => $val) { ?>
             <div class="cart-item-info" name="<?= $key?>">
                 <div class="product-info">
-                    <img src='./public/upload/<?= $val['thumnail']?>' alt='Image' />
+                    <img src='./public/upload/products/<?= $val['thumnail']?>' alt='Image' />
                     <div class='cart-des-item'>
                         <p><?= $val['name']?></p>
                         <p><?= $val['price']?> Đ</p>

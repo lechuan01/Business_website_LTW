@@ -65,7 +65,16 @@ th{
     background:rgb(255, 255, 255);
     padding:10px;
     border-radius:10px;
-    box-shadow:0 0 5px rgb(21, 221, 38);
+    box-shadow:0 0 5px rgb(218, 218, 218);
     margin: auto;
     width:600px;
+}
+.paymentss h1 {
+    text-align: center;
+}
+.paymentss form {
+    margin: 0 auto;
+}
+.paymentss table {
+    margin: 0 auto;
 }

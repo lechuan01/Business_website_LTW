@@ -55,31 +55,31 @@
                 <div class="user-box">
                     <label class="thanh">Thank you for using our service! See you soon.</label>
                 </div>
-                <div class="btn btn-success btn-lg btn-block">  
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <a href="/checkout/create?type=cash">DONE</a>
+                <div class="btn btn-success btn-lg btn-block text-center" style="width: 100%;">  
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <a href="/checkout/create?type=cash">DONE</a>
                 </div>
             </form>
         </div>
     </div>
 
     <div id="popup5" class="overlay">
-            <div class="login-box">
-                <h2> Payment Success </h2>
-                <form>
-                    <div class="user-box">
-                        <label id="main" style="width: 320px; height: 400px;">
-                               <img src="public/img/momo.png" height="400" />
-                        </label><br>
-                        <label>Thank you for using our service! See you soon.</label>
-                          
-                    </div>
-                    <div class="btn btn-success btn-lg btn-block">  
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <a href="/checkout/create?type=online">DONE</a>
-                </form>
-            </div>
+        <div class="login-box">
+            <h2> Payment Success </h2>
+            <form>
+                <div class="user-box">
+                    <label id="main" style="width: 320px; height: 400px;">
+                            <img src="public/img/momo.png" height="400" width="100%"/>
+                    </label><br>
+                    <label>Thank you for using our service! See you soon.</label>   
+                </div>
+                <div class="btn btn-success btn-lg btn-block" style="width: 100%;">  
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <a href="/checkout/create?type=online">DONE</a>
+                </div>
+            </form>
         </div>
+    </div>
 
 <script>
     

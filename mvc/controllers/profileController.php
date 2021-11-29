@@ -7,8 +7,8 @@ class profileController extends Controller{
     public function show(){
         // $blogs = $this->callmodel("BlogDB");
         // $blogs = $blogs->getAll();
-        $phone = $_SESSION[]
-        $user = $this->UserDB->getbyPhoneNumber()
+        // $phone = $_SESSION[]
+        // $user = $this->UserDB->getbyPhoneNumber();
         $this->callview("profile",[]);
     }
     
