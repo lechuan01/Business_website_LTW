@@ -151,6 +151,9 @@
   display: flex !important;
   width: 100% !important;
 }
+.product-review p {
+  text-align: justify;
+}
 .product-review h2 {
   position: relative;
   width: 100%;

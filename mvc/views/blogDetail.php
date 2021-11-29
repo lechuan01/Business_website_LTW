@@ -1,26 +1,7 @@
-<div class="page-section">
+<div class="page-section"><h1>Details</h1>
     <div class="container">
-        <div class="row" id="aq">
-            <img src="/public/img/blog/aq.jpg" alt="Quảng cáo" id="img-aq">
-            <!-- <div class="col-sm-10">
-                <form action="#" class="form-search-blog">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <select id="categories" class="custom-select bg-light">
-                                <option>All Categories</option>
-                                <option value="travel">Travel</option>
-                                <option value="lifestyle">LifeStyle</option>
-                                <option value="healthy">Healthy</option>
-                                <option value="food">Food</option>
-                            </select>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Enter keyword..">
-                    </div>
-                </form>
-            </div>
-            <div class="col-sm-2 text-sm-right">
-                <button class="btn btn-secondary">Filter <span class="mai-filter"></span></button>
-            </div> -->
+        <div class="row" >
+            <img src="/public/img/blog/aq.jpg" alt="Quảng cáo" id="img-aq1">
         </div>
 
         <div class="row my-5">
@@ -34,7 +15,7 @@
                         </div>
                     </div>
                     <div class="body">
-                        <h5 class="post-title"><a href="blog/detail?title=<?= $blogs["title"]?>"><?= $blogs["title"]?></a></h5>
+                        <h5 class="post-title"><a href="/<?= $blogs['title']?>"><?= $blogs["title"]?></a></h5>
                         <div class="post-date x51"><?= $blogs["author"]?> - <?= $blogs["post_time"]?></div>
                     </div>
                 </div>
@@ -60,13 +41,4 @@
 
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-    
-        $('#img-aq').click(function () {
-            location.href = "./product";
-        });
-        
-
-    });
-</script>
+<script 

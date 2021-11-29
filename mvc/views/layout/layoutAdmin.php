@@ -57,6 +57,9 @@
             $('#admin-product-table').DataTable({
                 responsive: true
             });
+            $('#admin-member-table').DataTable({
+                responsive: true
+            })
         });
     </script>
     

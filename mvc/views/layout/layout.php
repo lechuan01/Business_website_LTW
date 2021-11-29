@@ -41,5 +41,7 @@
         <script src="/public/js/productDetail.js"></script>
         <script src="/public/js/login.js"></script>
         <script src="/public/js/register.js"></script>
+        <script src="/public/js/blog.js"></script>
+        <script src="/public/js/blogDetail.js"></script>
     </body>
 </html>
