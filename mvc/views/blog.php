@@ -1,6 +1,6 @@
 <div class="page-section">
     <div class="container">
-        <div class="row" id="aq">
+        <div id="aq">
             <img src="/public/img/blog/aq.jpg" alt="Quảng cáo" id="img-aq">
             <!-- <div class="col-sm-10">
                 <form action="#" class="form-search-blog">

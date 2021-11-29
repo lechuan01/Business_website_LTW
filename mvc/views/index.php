@@ -2,7 +2,7 @@
     <div class="home-banner">
         <div class="slideshow-container">
             <div class="mySlides img-fade">
-                <img src="./public/upload/d9mrd0c-d95eeca4-1d26-491f-9002-d8167994077c.png">
+                <img src="./public/upload/d9mrd0c-d95eeca4-1d26-491f-9002-d8167994077c.jpg">
                 <!-- <div class="text">Caption Text</div> -->
             </div>
 
