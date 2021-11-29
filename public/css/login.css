@@ -64,7 +64,7 @@
   border: 1px solid;
   /* background: #03b8e2;
   background: linear-gradient(300deg, #03b8e2 0%, #2152ff 100%); */
-  background: black;
+  background: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 18px;
   color: #e9f4fb;

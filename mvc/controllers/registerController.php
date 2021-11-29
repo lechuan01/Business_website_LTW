@@ -9,6 +9,7 @@ class registerController extends Controller{
     public function __construct(){
         $this->UserDB = $this->callmodel("UserDB");
     }
+
    # đăng ký tài khoản khách hàng
     public function registerUser(){
         //1. get data user nhập

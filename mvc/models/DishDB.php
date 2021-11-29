@@ -38,6 +38,7 @@ class DishDB extends DB{
         if ($result) 
             return $result;
         else return [];
+
     }
 }
 ?>

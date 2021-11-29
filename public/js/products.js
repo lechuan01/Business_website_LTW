@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $('.btn-cart').click(function (e) {
         //console.log(e.target.name);
-        console.log(e.target.parentNode.parentNode.id);
         $.ajax({
             url: "/product/Store",
             method: "GET",

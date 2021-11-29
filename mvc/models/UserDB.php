@@ -24,7 +24,6 @@ class UserDB extends DB{
         $sql = "SELECT * FROM `accounts` WHERE phone_number = ".$phoneNumber.";";
         return mysqli_query($this->connect, $sql);
     }
-    
 }
 
 ?>

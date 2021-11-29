@@ -52,6 +52,7 @@
         <div id="content-register"></div>
         <div class="signup_link">
             Bạn đã có tài khoản? <a href="/login">Đăng nhập ngay</a>
+
         </div>
         
     </form>

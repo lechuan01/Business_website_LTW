@@ -9,7 +9,9 @@ class productController extends Controller{
     public function productDetail($param) {
         $list = $this->callmodel("DishDB");
         $list = $list->getbyID($param['id']);
-        $this->callview("productDetail",["detail"=> $list]);
+        $review = $this->callmodel("ReviewDB");
+        $review = $review->Getreview($param['id']);
+        $this->callview("productDetail",["detail"=> $list,'review'=> $review]);
     }
     public function Store($param) {
         $Iddish = $param['id'];
@@ -29,6 +31,11 @@ class productController extends Controller{
         }
         echo count($_SESSION["Cart"]);
     }
+    public function newreview(){
+        $review = $this->callmodel("ReviewDB");
+        $review = $review->addReview($_POST['id'],$_POST['content']);
+    }
+    
 }
 
 ?>
