@@ -141,6 +141,16 @@ class adminController extends Controller{
             echo json_encode(404);
         }
     }
+    public function completeOrder() {
+             $id = $_POST["id"];
+            $res = $this->AdminOrdersDB->completeOrderbyid($id);
+            if ($res) {
+                echo true;
+            }
+            else {
+                echo false;
+            }
+    }
     public function member(){
         // $menu = $this->callmodel("DishDB");
         // $menu = $menu->getDB();
