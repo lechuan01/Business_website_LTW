@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    const formatter = new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND"
+    });
+
     TotalPrice();
     $('.change-qty-btn').click(function (e) {
         update(e.target.parentNode.id, e.target.innerHTML);
@@ -47,8 +52,8 @@ $(document).ready(function () {
             x += parseInt($(".total-price").eq(i).text());
         }
         x = Math.round((x * 1.1) * 100) / 100;
-
-        $('.total-number').text(x);
+        const total = formatter.format(x);
+        $('.total-number').text(total);
         // $.ajax({
         //   url:"/cart/TotalPrice",
         //   method: "GET",
@@ -72,10 +77,5 @@ $(document).ready(function () {
                 location.reload();
             }
         });
-        // if ($("#quantity-product").html() == "1") { location.reload(); return; }
-        // $(".payment-info:first").children("p:last").html(Number($("#quantity-product").html()) - 1);
-        // $("#quantity-product").html(Number($("#quantity-product").html()) - 1);
-        // $(".cart-item-info[name=" + id + "]").remove();
-        // TotalPrice();
     }
 })

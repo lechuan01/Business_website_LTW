@@ -31,17 +31,17 @@
     <table style="margin:0 auto;" >
         <thead>
             <tr>
-                <th colspan="3">Phương thức thanh toán</th>
+                <th colspan="3" style="text-align: center;">Phương thức thanh toán</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    <button type="button" class="btn" onclick="window.location.href='#popup4'">
-                        CASH   <span class="glyphicon glyphicon-chevron-right"></span></button></td>
-                <td>
-                    <button type="button" class="btn" onclick="window.location.href='#popup5'">
-                        ONLINE   <span class="glyphicon glyphicon-chevron-right"></span></button></td>
+                <td class="d-flex">
+                    <button style="width: 50%;" type="button" class="btn btn-secondary" onclick="window.location.href='#popup4'">
+                        CASH   <span class="glyphicon glyphicon-chevron-right"></span></button>
+                    <button style="width: 50%;" type="button" class="btn btn-success" onclick="window.location.href='#popup5'">
+                        ONLINE   <span class="glyphicon glyphicon-chevron-right"></span></button>
+                </td>
             </tr>
         </tbody>
     </table>
