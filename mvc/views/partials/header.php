@@ -21,7 +21,7 @@
                 <?php } else { ?>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Hi, Bảo
+                            Hi, <?php if (isset($_SESSION['name'])) echo $_SESSION['name']; ?>
                         </button>
                         <ul class="dropdown-menu" style="height: max-content;" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/profile">Tài khoản của tôi</a></li>

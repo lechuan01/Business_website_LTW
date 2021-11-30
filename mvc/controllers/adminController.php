@@ -94,9 +94,9 @@ class adminController extends Controller{
             }
             
             $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, $thumnail, $image_array);
-            if ($result) {
-                header("Location: /admin/product");
-            }
+            // if ($result) {
+            //     header("Location: /admin/product");
+            // }
         }
     }
     public function orders(){

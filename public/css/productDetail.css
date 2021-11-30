@@ -159,12 +159,14 @@
   width: 100%;
   text-align: center;
 }
+#review {
+  width: 100%;
+}
 .card-review {
   width: 40%;
-  height: 100px;
+  height: max-content;
   background: rgb(238, 238, 238);
   border-radius: 5px;
-  margin: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -209,6 +211,9 @@
 }
 @media screen and (max-width: 744px) {
   .write-new-review {
+    width: 100%;
+  }
+  .card-review {
     width: 100%;
   }
 }

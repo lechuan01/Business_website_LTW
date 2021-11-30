@@ -1,3 +1,5 @@
 .member-container {
-    padding-top: 30px;
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto;
 }

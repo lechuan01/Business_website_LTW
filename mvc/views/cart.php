@@ -53,7 +53,7 @@
         </div>
         <?php }else {?> 
             <div>
-                <h1>Không có sản phẩm nào được chọn</h1>
+                <h1 style="text-align: center;">Không có sản phẩm nào được chọn</h1>
             </div>
         <?php } ?>
     </div>
