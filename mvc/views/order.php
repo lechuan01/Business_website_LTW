@@ -17,7 +17,9 @@
                 <td><?= $value['cost']?></td>
                 <td><?= $value['status']?></td>
                 <td><button name="orderDetail" class="btn btn-primary">Chi tiết</button></td>
+                <?php if($value['status'] == 'Đang xử lý'){ ?>
                 <td><button name="Cancelorder" class="btn btn-danger">Hủy</button></td>
+                <?php }?>
             </tr>
         <?php }?>
         </table>
