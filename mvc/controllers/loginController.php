@@ -20,6 +20,7 @@ class loginController extends Controller{
                 $password = $row['password'];
                 $role = $row['role'];
                 $name = $row['full_name'];
+                $accept = $row['accept'];
             }
            
             if($role == "ADM"){ //admin
@@ -36,12 +37,17 @@ class loginController extends Controller{
             }
             else{
                 if (password_verify($password_input, $password)) {
-                    $_SESSION["id"] = $id;
-                    $_SESSION["role"] = "MEM";
-                    $_SESSION["name"] = $name;
-                    echo "true/MEM";
-                } else {
-
+                    if ($accept == 'T') {
+                        $_SESSION["id"] = $id;
+                        $_SESSION["role"] = "MEM";
+                        $_SESSION["name"] = $name;
+                        echo "true/MEM";
+                    }
+                    else if ($accept == 'F') {
+                        echo "false/restrict";
+                    }
+                } 
+                else {
                     echo "false/null";
                     //echo "Mật khẩu không đúng";
                 }

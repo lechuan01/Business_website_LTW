@@ -4,6 +4,11 @@ function console_log($d) {
     echo 'console.log('.json_encode($d).');';
     echo '</script>';
 }
+function alert($d) {
+    echo '<script>';
+    echo 'alert('.json_encode($d).');';
+    echo '</script>';
+}
 class App{
 
     protected $controller="homeController";

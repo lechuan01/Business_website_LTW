@@ -10,7 +10,12 @@ $(document).ready(function () {
                 const res = data.split('/');
                
                 if (res[0] == 'false') {
-                    $('#content_login').html("<p class='x51' style='display:inline'>Số điện thoại hoặc mật khẩu không đúng</p>"); 
+                    if (res[1] == 'null') {
+                        $('#content_login').html("<p class='x51' style='display:inline'>Số điện thoại hoặc mật khẩu không đúng</p>"); 
+                    }
+                    else {
+                        $('#content_login').html("<p class='x51' style='display:inline'>Tài khoản của bạn không được phép đăng nhập vì vi phạm quy định của website. Vui lòng liên hệ quản trị viên: admin_corgear@gmail.com</p>"); 
+                    }
                 } 
                 else {
                     if (res[0] == 'true' && res[1] == 'ADM') {

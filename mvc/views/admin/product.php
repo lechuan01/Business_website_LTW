@@ -44,6 +44,7 @@
                                 <label class="input-group-text" for="inputGroupFile01">Tải ảnh minh họa</label>
                                 <input type="file" class="form-control" id="inputGroupFile01" name="thumnail" required>
                             </div>
+                            <p>Bạn cần thêm 4 tấm ảnh</p>
                             <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupFile01">Ảnh chi tiết cho sản phẩm</label>
                                 <input type="file" class="form-control" id="inputGroupFile01" name="product_image[]" multiple required>
@@ -80,7 +81,7 @@
                         <td><?php echo number_format($item["price"], 0, "", ","); ?></td>
                         <td>
                             <button type="button" class="btn btn-warning edit-product" data-bs-toggle="modal" data-bs-target="#exampleModal-edit" data-id="<?php echo $item["id"]; ?>">Sửa</button>
-                            <button type="button" class="btn btn-danger delete-product" onclick="confirm('Bạn chắc chắn muốn xóa?')" data-id="<?php echo $item["id"]; ?>">Xóa</button>
+                            <button type="button" class="btn btn-danger delete-product" data-id="<?php echo $item["id"]; ?>">Xóa</button>
                         </td>
                     </tr>
                 <?php } ?>
@@ -147,19 +148,21 @@
 <script>
     $(document).ready(function() {
         $('.delete-product').click(function() {
-            const id = $(this).data('id'); // product id
-            $.ajax({
-                type: 'post',
-                url: "/admin/productDelete",
-                data: {
-                    id: id
-                },
-                success: function(res) {
-                    if (res) {
-                        window.location.href = "/admin/product";
+            if (confirm("Bạn có chắc chắn xóa sản phẩm này?")) {
+                const id = $(this).data('id'); // product id
+                $.ajax({
+                    type: 'post',
+                    url: "/admin/productDelete",
+                    data: {
+                        id: id
+                    },
+                    success: function(res) {
+                        if (res) {
+                            window.location.href = "/admin/product";
+                        }
                     }
-                }
-            });
+                });
+            }
         });
         $('.edit-product').click(function() {
             const id = $(this).data('id');
@@ -170,8 +173,10 @@
                 dataType: 'json',
                 success: function(res) {
                     if (res == 404) {
-                        console.log("Not found product");
-                    } else {
+                        alert("Không tìm thấy sản phẩm");
+                    } 
+                    
+                    else {
                         $('#modal-body-edit form').attr('action', `/admin/productUpdate?id=${res[0].id}`);
                         // Name
                         $('#modal-body-edit form .input-group:first-child input').val(res[0].name);

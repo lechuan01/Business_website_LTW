@@ -19,71 +19,79 @@
                     $index += 1; ?>
                     <tr>
                         <td><?php echo $index ?></td>
-                        <td><?php echo $mem["id"]; ?></td>
+                        <?php if ($mem["accept"] == 'F') { ?>
+                        <td>
+                            <span class="badge bg-danger"><?php echo $mem["id"]; ?></span>
+                        </td>
+                        <?php } else { ?>
+                        <td>
+                        <span class="badge bg-success"><?php echo $mem["id"]; ?></span>
+                        </td>
+                        <?php } ?>
                         <td><?php echo $mem["full_name"]; ?></td>
                         <td><?php echo $mem["phone_number"]; ?></td>
                         <td><?php echo $mem["email"]; ?></td>
                         <td><?php echo $mem["address"]; ?></td>
-                        <td>
-                            <button type="button" class="btn btn-danger delete-product" onclick="confirm('Bạn chắc chắn muốn cấm thành viên này?')" data-id="<?php echo $mem["id"]; ?>">Cấm thành viên này</button>
-                        </td>
+                        <?php if ($mem['accept'] == 'T') { ?>
+                            <td>
+                                <button type="button" class="btn btn-danger restrict-member-btn" data-id="<?php echo $mem["id"]; ?>">Cấm thành viên này</button>
+                            </td>
+                        <?php } else {?>
+                            <td>
+                                <button type="button" class="btn btn-success unrestrict-member-btn" data-id="<?php echo $mem["id"]; ?>">Cho phép hoạt động</button>
+                            </td>
+                        <?php } ?>
                     </tr>
                 <?php } ?>
 
             </tbody>
         </table>
-        <!-- Modal for update product -->
-        <div class="modal fade" id="exampleModal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cập nhật sản phẩm</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="modal-body-edit">
-                        <form action="" enctype="multipart/form-data" method="post">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Tên sản phẩm</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="name">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Mô tả</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="specs">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Giá</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="price">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Số lượng</span>
-                                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="qty">
-                            </div>
-                            <div class="input-group mb-3">
-                                <select class="form-select" aria-label="Default select example" name="category">
-                                    <option selected>Phân loại</option>
-                                    <option value="keyboard">Keyboard</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="headphone">Headphone</option>
-                                    <option value="case">Case</option>
-                                </select>
-                            </div>
-                            <div class="input-group d-flex flex-column mb-3">
-                                <img style="width: 50%; margin: 0 auto; padding: 10px;" src="" alt="">
-                                <input style="width: 100%;" type="file" class="form-control" id="inputGroupFile01" name="thumnail">
-                            </div>
-                            <div class="input-group mb-3">
-                                <img src="" alt="">
-                                <label class="input-group-text" for="inputGroupFile01">Ảnh chi tiết cho sản phẩm</label>
-                                <input type="file" class="form-control" id="inputGroupFile01" name="product_image[]" multiple>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Đóng</button>
-                                <button type="submit" class="btn btn-success" name="submit">Cập nhật</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $('.restrict-member-btn').click(function() {
+            if (confirm("Bạn có chắc chắn hạn chế thành viên này?")) {
+
+                const id = $(this).data('id');
+            
+                $.ajax({
+                    type: 'post',
+                    url: '/admin/memberRestrict',
+                    data: { id: id },
+                    success: function(res) {
+                        if (res == 200) {
+                            alert("Bạn đã hạn chế thành viên này hoạt động");
+                        }
+                        else {
+                            alert(res);
+                        }
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+        $('.unrestrict-member-btn').click(function() {
+            if (confirm("Bạn có chắc chắn cho phép thành viên này hoạt động?")) {
+
+                const id = $(this).data('id');
+            
+                $.ajax({
+                    type: 'post',
+                    url: '/admin/memberUnrestrict',
+                    data: { id: id },
+                    success: function(res) {
+                        if (res == 200) {
+                            alert("Bạn đã hạn chế thành viên này hoạt động");
+                        }
+                        else {
+                            alert(res);
+                        }
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+    });
+</script>
