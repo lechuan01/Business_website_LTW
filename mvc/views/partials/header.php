@@ -11,7 +11,7 @@
             <li><a class="active" href="./home">Trang chủ</a></li>
             <li><a href="/product">Sản phẩm</a></li>
             <li><a href="/blog">Tin tức</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
             <li><a href="/cart"><i class="fas fa-shopping-cart"></i>
                     <span id="quantity-product"><?= empty($_SESSION["Cart"]) ? 0 : count($_SESSION["Cart"]) ?></span>
                 </a></li>
@@ -25,6 +25,7 @@
                         </button>
                         <ul class="dropdown-menu" style="height: max-content;" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/profile">Tài khoản của tôi</a></li>
+                            <li><a class="dropdown-item" href="/order">Đơn hàng</a></li>
                             <li><a class="dropdown-item" href="#" id="logout" name="logout" style="color: red;">Đăng Xuất</a></li>
                         </ul>
                     </div>

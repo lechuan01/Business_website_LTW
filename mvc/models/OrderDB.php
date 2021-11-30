@@ -1,17 +1,6 @@
 <?php
 
 class OrderDB extends DB{
-    private 
-    # lấy dữ liệu để in hóa đơn thanh toán 
-    function getPayment($id){
-        $array = "SELECT IDCART,QUANTITY,cart.PRICE,TOTALPRICE,SDT,NAMECUST,DISHNAME FROM cart INNER JOIN dish ON cart.IDDISH=dish.IDDISH WHERE IDCART='$id';";
-        $array = mysqli_query($this->connect,$array);
-        $result=[];
-        while($s = mysqli_fetch_array($array, MYSQLI_ASSOC)){
-            array_push($result,$s);
-        }
-        return $result;
-    }
     # thêm 1 hóa đơn mới vào csdl
     function AddOrder($type){
         $id = rand(0,1000000000);
@@ -29,15 +18,32 @@ class OrderDB extends DB{
             unset($_SESSION["pay"]);
     }
 
-    # lấy tất cả hóa đơn từ csdl
-    function showReceiptDB(){
-        $array = "SELECT DISTINCT PAYMENT.IDPAY, PAYMENT.IDCART,PAYMENT.TOTALPRICE,SDT,NAMECUST,PAYTIME FROM CART INNER JOIN PAYMENT ON CART.IDCART=PAYMENT.IDCART;";
+    # khách láy hóa đơn 
+    function getOrderbyId(){
+        $idcus = $_SESSION['id'];
+        $array = "SELECT * FROM `orders` WHERE `member_id` = '$idcus';";
         $array = mysqli_query($this->connect,$array);
         $result=[];
         while($s = mysqli_fetch_array($array, MYSQLI_ASSOC)){
             array_push($result,$s);
         }
         return $result;
+    }
+    # khách láy chi tiết hóa đơn 
+    function getOrderDetailbyId($OrderId){
+        $array = "SELECT `belong`.*,`product`.`name`,`product`.`thumnail`
+         FROM `belong`,`product` WHERE `order_id` = $OrderId AND `product_id`= `id`;";
+        $array = mysqli_query($this->connect,$array);
+        $result=[];
+        while($s = mysqli_fetch_array($array, MYSQLI_ASSOC)){
+            array_push($result,$s);
+        }
+        return $result;
+    }
+    # hủy đơn
+    function cancelOrder($OrderId){
+        $array = "UPDATE `orders` SET `status`='Đã Hủy' WHERE `id`= $OrderId;";
+        $array = mysqli_query($this->connect,$array);
     }
 }
 ?>

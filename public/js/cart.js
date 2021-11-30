@@ -78,4 +78,39 @@ $(document).ready(function () {
         // $(".cart-item-info[name=" + id + "]").remove();
         // TotalPrice();
     }
+    $('button[name=orderDetail]').click(function(e){
+        $('#table-orderdetail').children().remove();
+        $.ajax({
+            url: "/order/showdetail",
+            method: "POST",
+            data: {
+                "id": e.target.parentNode.parentNode.id
+            },
+            success: function(res) {
+                var x=JSON.parse(res),string;
+                x.forEach(element => {
+                    string = '<tr>'
+                    string += '<td>'+element['name']+'</td>'
+                    string += '<td>'+element['quantity']+'</td>'
+                    string += '<td>'+element['price']+'</td>'
+                    string += '<td><img src="/public/upload/products/'+element['thumnail']+'"></td>'
+                    string += '</tr>'
+                    $('#table-orderdetail').append(string);
+                });
+            }
+        });
+    });
+    $('button[name=Cancelorder]').click(function(e){
+        $.ajax({
+            url: "/order/cancel",
+            method: "POST",
+            data: {
+                "id": e.target.parentNode.parentNode.id
+            },
+            success: function(res) {
+                location.reload();
+            }
+        });
+    });
+    
 })
