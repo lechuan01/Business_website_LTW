@@ -69,7 +69,7 @@
             <form>
                 <div class="user-box">
                     <label id="main" style="width: 320px; height: 400px;">
-                            <img src="public/img/momo.png" height="400" width="100%"/>
+                            <img src="public/img/momo.jpg" style="width: 100%; aspect-ratio: 1/1;"/>
                     </label><br>
                     <label>Thank you for using our service! See you soon.</label>   
                 </div>
