@@ -1,44 +1,47 @@
-<div class="page-section"><h1>Details</h1>
-    <div class="container">
-        <div class="row" >
+    <div class="container body-blog-detail">
+        <!-- <div class="row" >
             <img src="/public/img/blog/aq.jpg" alt="Quảng cáo" id="img-aq1">
-        </div>
-
-        <div class="row my-5">
-        <?php foreach ($data["blog"] as $key => $blogs) {
-        ?>
-            <div class="col-lg-6 py-3">
-                <div class="card-blog">
-                    <div class="header">
-                        <div class="post-thumb">
-                            <img src="/public/img/blog/<?= $blogs["thumnail"]?>" alt="">
-                        </div>
-                    </div>
-                    <div class="body">
-                        <h5 class="post-title"><a href="/<?= $blogs['title']?>"><?= $blogs["title"]?></a></h5>
-                        <div class="post-date x51"><?= $blogs["author"]?> - <?= $blogs["post_time"]?></div>
-                    </div>
+        </div> -->
+        <div class="row post">
+            <?php foreach ($data["blog"] as $key => $blogs) {
+                if (!isset($blogs["thumnail"])) continue;
+            ?>
+                <!-- <div style="background-image:url(public/img/blog/<?= $blogs['thumnail'] ?>);"></div> -->
+                
+                    <img class="post-img" src="/public/img/blog/<?= $blogs["thumnail"] ?>" alt="">
+                
+                <div class="post-time post-title1">
+                    <h1 class="post-title-detail"><?= $blogs['title'] ?></h1>
+                    <div class="post-date x51"><?= $blogs["author"] ?> - <?= $blogs["post_time"] ?></div>
                 </div>
-            </div>
-            <?php }?>
-        </div>
 
-        <div aria-label="Page Navigation">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </div>
 
+            <?php } ?>
+        </div>
+        <div class="content-blog-detail">
+            <?php foreach ($data["blog"] as $key => $blogs) {
+            ?>
+                <?php if (isset($blogs['type'])) {
+                    if ($blogs['type'] == 'title') {
+                ?>
+                        <p class="post-content-title"><?= $blogs["content"] ?></p>
+                    <?php } else if ($blogs['type'] == 'text') { ?>
+                        <p class="post-content"><?= $blogs["content"] ?></p>
+                    <?php } else if ($blogs['type'] == 'img') { ?>
+                        <img class="blog-content-img" src="/public/img/blog/<?= $blogs["content"] ?>" alt=<?= $blogs["content"] ?>>
+                    <?php } else if ($blogs['type'] == 'h4') { ?>
+                        <p class="post-h4"><?= $blogs["content"] ?></p>
+                    <?php } else if ($blogs['type'] == 'list') { ?>
+                        <li><?= $blogs["content"] ?></li>
+                    <?php } else if ($blogs['type'] == 'link') { ?>
+                        <li><a href=<?= $blogs["link"] ?>><?= $blogs["content"] ?></a></li>
+                    <?php } else if ($blogs['type'] == 'footer') { ?>
+                        <hr class="post-hr">
+                        <p class="post-content-footer"><strong><em><?= $blogs["content"] ?></em></strong></p>
+                    <?php } ?>
+
+            <?php }
+            } ?>
+        </div>
     </div>
-</div>
-<script 
+    </div>
