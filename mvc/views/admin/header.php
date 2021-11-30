@@ -9,12 +9,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/admin/member">Quản lý thành viên</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Quản lý thông tin</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/blog">Quản lý tin tức</a>
-                    </li>
+    
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/orders">Quản lý đơn hàng</a>
                     </li>
