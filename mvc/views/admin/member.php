@@ -32,9 +32,15 @@
                         <td><?php echo $mem["phone_number"]; ?></td>
                         <td><?php echo $mem["email"]; ?></td>
                         <td><?php echo $mem["address"]; ?></td>
-                        <td>
-                            <button type="button" class="btn btn-danger restrict-member-btn" data-id="<?php echo $mem["id"]; ?>">Cấm thành viên này</button>
-                        </td>
+                        <?php if ($mem['accept'] == 'T') { ?>
+                            <td>
+                                <button type="button" class="btn btn-danger restrict-member-btn" data-id="<?php echo $mem["id"]; ?>">Cấm thành viên này</button>
+                            </td>
+                        <?php } else {?>
+                            <td>
+                                <button type="button" class="btn btn-success unrestrict-member-btn" data-id="<?php echo $mem["id"]; ?>">Cho phép hoạt động</button>
+                            </td>
+                        <?php } ?>
                     </tr>
                 <?php } ?>
 
@@ -61,6 +67,28 @@
                         else {
                             alert(res);
                         }
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+        $('.unrestrict-member-btn').click(function() {
+            if (confirm("Bạn có chắc chắn cho phép thành viên này hoạt động?")) {
+
+                const id = $(this).data('id');
+            
+                $.ajax({
+                    type: 'post',
+                    url: '/admin/memberUnrestrict',
+                    data: { id: id },
+                    success: function(res) {
+                        if (res == 200) {
+                            alert("Bạn đã hạn chế thành viên này hoạt động");
+                        }
+                        else {
+                            alert(res);
+                        }
+                        window.location.reload();
                     }
                 });
             }

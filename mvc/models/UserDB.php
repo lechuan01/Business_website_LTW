@@ -2,9 +2,9 @@
 
 class UserDB extends DB{
     # thêm tài khoản người dùng mới vào csdl
-    public function InsertNewUser($id, $fullName, $password, $phoneNumber, $email, $address, $role)
+    public function InsertNewUser($id, $fullName, $password, $phoneNumber, $email, $address, $role, $accept)
     {
-        $qr = "INSERT INTO accounts VALUES('$id','$fullName','$password','$phoneNumber','$email','$address','$role')";
+        $qr = "INSERT INTO accounts VALUES('$id','$fullName','$password','$phoneNumber','$email','$address','$role', '$accept')";
         $result = mysqli_query($this->connect, $qr);
         return json_encode($result);
     }
@@ -49,8 +49,8 @@ class UserDB extends DB{
             return mysqli_error($this->connect);
         }
     }
-    function restrictUser($id) {
-        $sql = "UPDATE accounts SET accept = 'F' WHERE id = '$id'";
+    function restrictUser($id, $type) {
+        $sql = "UPDATE accounts SET accept = '$type' WHERE id = '$id'";
         $res = $this->connect->query($sql);
         if ($res) {
             return "true";

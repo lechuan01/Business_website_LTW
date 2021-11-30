@@ -26,7 +26,7 @@ class registerController extends Controller{
                 $address = trim($_POST["address"]);
                 $role = "MEM";
                 // 2. Insert database bảng accounts
-                $kq = $this->UserDB->InsertNewUser($id, $fullName, $password, $phoneNumber, $email, $address, $role);
+                $kq = $this->UserDB->InsertNewUser($id, $fullName, $password, $phoneNumber, $email, $address, $role, 'T');
                 // 3. Show kết quả thành công/ thất bại
                 echo $kq;
             }

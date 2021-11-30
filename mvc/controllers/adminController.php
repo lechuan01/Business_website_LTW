@@ -137,7 +137,19 @@ class adminController extends Controller{
     public function memberRestrict() {
         if (isset($_POST["id"])) {
             $id = $_POST["id"];
-            $res = $this->UserDB->restrictUser($id);
+            $res = $this->UserDB->restrictUser($id, 'F');
+            if ($res == "true") {
+                echo json_decode(200);
+            }
+            else {
+                echo json_encode($res);
+            }
+        }
+    }
+    public function memberUnrestrict() {
+        if (isset($_POST["id"])) {
+            $id = $_POST["id"];
+            $res = $this->UserDB->restrictUser($id, 'T');
             if ($res == "true") {
                 echo json_decode(200);
             }
