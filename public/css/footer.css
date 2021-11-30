@@ -1,0 +1,12 @@
+@import "variables.css";
+footer {
+    margin-top: 30px;
+    background: var(--dark) !important;
+}
+footer * {
+    color: #fff;
+}
+#copyright {
+    padding: 0;
+    margin: 0;
+}

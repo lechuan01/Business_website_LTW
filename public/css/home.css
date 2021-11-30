@@ -1,0 +1,216 @@
+@import 'variables.css';
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(224, 223, 233, 0.7);
+  visibility: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1100;
+  box-shadow: var(--shadow);
+}
+
+.back-to-top::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: -4px auto;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #555;
+  border-right: 2px solid #555;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.back-to-top:hover {
+  background: var(--primary);
+}
+
+.back-to-top:hover::after {
+  border-color: #fff;
+}
+
+.page-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+  height: 300px;
+}
+.page-container .row .col-lg-4 .card-service .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .row .col-lg-4 .card-service .body {
+  text-align: center;
+}
+.banner-info {
+  width: 100%;
+  height: 490px;
+}
+.banner-info .bg-image {
+  background-image: url('../upload/corsair-banner.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+}
+.banner-info .banner-info-slogan {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto 0;
+}
+.banner-info .banner-info-slogan div {
+  color: white;
+  font-size: 30px;
+  padding-right: 20px;
+  height: inherit;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-info .banner-info-slogan div h1 {
+  margin: 0;
+}
+.banner-info .banner-info-slogan div h1:first-child {
+  color: rgb(236, 240, 47);
+}
+#about {
+  padding: 0 10px;
+  padding-bottom: 10px;
+  height: 600px;
+}
+.custom-about-section {
+  position: relative;
+  background-image: url('/public/upload/ezgif.com-gif-maker.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.custom-about-section * {
+  color: #fff;
+}
+.about-content {
+  width: 50%;
+}
+.about-content h1 {
+  color: rgb(217, 255, 0);
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+.achievement-container {
+  width: 100%;
+  height: 400px;
+  background: none;
+  padding: 20px;
+}
+.achievement-container h2 {
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+.achievement-container .achieve-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  height: max-content;
+}
+
+.achievement-container .achieve-block .ach-1,
+.achievement-container .achieve-block .ach-2,
+.achievement-container .achieve-block .ach-3,
+.achievement-container .achieve-block .ach-4 {
+  width: 100%;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.5s;
+}
+
+.ach-1:hover,
+.ach-2:hover,
+.ach-3:hover,
+.ach-4:hover {
+  transform: scale(1.1, 1.1);
+}
+.ach-1 h3 {
+  font-size: 50px;
+  color: var(--success);
+}
+
+.ach-2 h3 {
+  font-size: 50px;
+  color: var(--info);
+}
+
+.ach-3 h3 {
+  font-size: 50px;
+  color: var(--danger);
+}
+.ach-1 p {
+  font-size: 20px;
+}
+
+.ach-2 p {
+  font-size: 20px;
+}
+
+.ach-3 p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-content {
+    width: 100% !important;
+  }
+  .about-content .title-section {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .achievement-container .achieve-block .ach-1,
+  .achievement-container .achieve-block .ach-2,
+  .achievement-container .achieve-block .ach-3,
+  .achievement-container .achieve-block .ach-4 {
+    height: 200px;
+  }
+  .ach-1 p {
+    font-size: 15px;
+  }
+
+  .ach-2 p {
+    font-size: 15px;
+  }
+
+  .ach-3 p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .achievement-container {
+    height: max-content;
+  }
+  .achievement-container .achieve-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+}

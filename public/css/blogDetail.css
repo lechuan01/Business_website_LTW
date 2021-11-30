@@ -1,0 +1,89 @@
+.body-blog-detail{
+    line-height: 1.74;
+}
+.post-title-detail {
+    font-size: 44px;
+    line-height: 54px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: #fff;
+}
+#img-aq1{
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}    
+#img-aq1:hover  {
+    transform: scale(1.1);
+}
+.blog-content-img{
+    width: 100%;  
+    margin: 0 0 1em;
+}
+/* .content-blog-detail{
+    background-image: url(/public/img/blog/xlarge-1068x580.jpg);
+} */
+.post-title1 {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 0 30px 9px 30px;
+}
+.post-img{
+    width:100%;
+}
+.post{
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.content-blog-detail{
+    font-size: 16px;
+    line-height: 1.74;
+}
+.post-content{
+    font-family: Verdana, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.post-content-title{
+    font-size: 20px;
+    font-weight: 500;
+    font-style:italic;
+}
+.post-h4{
+    font-size: 18px;
+    font-weight: 500;
+    font-style:italic;
+}
+.post-content-footer{
+    font-size: 18px;
+}
+.post-hr{
+    max-width: 100px;
+    border: none;
+    border-bottom: 2px solid #8f98a1;
+    margin: 1.65em auto;
+}
+@media (max-width: 1018px) and (min-width: 768px){
+    .post-title-detail {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .content-blog-detail{
+        font-size: 14px;
+    }
+    .post-content-title{
+        font-size: 16px;
+    }
+
+
+}
+@media (max-width: 767px){
+.post-title-detail {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+.post-title1{
+    padding: 0 14px 0;
+}
+}

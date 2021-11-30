@@ -1,0 +1,47 @@
+.post-thumb{
+    height: 300px;
+}
+.post-thumb img{
+    height: 100%;
+    transition: transform 0.6s ease;
+    width: 100%;
+    
+    object-fit: cover;
+}
+.header {
+    margin: 0;
+    position: relative;
+    height: max-content;
+    cursor: pointer;
+  }
+  .header:hover {
+    box-shadow: var(--shadow);
+  }
+.header:hover img {
+    transform: scale(1.1);
+  }
+
+#img-aq{
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+  
+}    
+#aq{
+  cursor: pointer;
+}
+#aq:hover #img-aq  {
+    transform: scale(1.1);
+}
+  .post-thumb {
+    background: var(--white-light);
+    margin: 0 auto;
+    transition: background 0.5s ease;
+    overflow: hidden;
+  }
+
+  @media (min-width: 992px){
+  .col-lg-4 {
+      height: 100px;
+  }
+}

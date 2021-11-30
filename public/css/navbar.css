@@ -1,0 +1,115 @@
+@import 'variables.css';
+nav {
+  background: var(--back);
+  height: var(--nav-height);
+  width: 100%;
+  z-index: 100;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: absolute;
+}
+nav.fixed {
+  background: var(--light);
+  position: fixed;
+  box-shadow: var(--shadow);
+  top: 0;
+}
+
+nav label.logo {
+  color: var(--dark);
+  font-size: 35px;
+  font-weight: bold;
+  margin: auto 0;
+  height: var(--nav-height);
+  align-items: center;
+}
+nav label.logo a {
+  color: var(--dark);
+  font-weight: bold;
+  margin-top: 4px;
+}
+nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+  position: relative;
+  margin: auto 0;
+  height: var(--nav-height);
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+nav ul li:last-child {
+  margin-right: 0;
+}
+nav ul li a {
+  color: var(--dark);
+  font-size: 17px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+nav label a {
+  color: var(--dark);
+}
+.checkbtn {
+  font-size: 30px;
+  color: #000;
+  float: right;
+  cursor: pointer;
+  display: none;
+  margin: auto 0;
+  margin-top: 9px;
+}
+#check {
+  display: none;
+}
+/* @media (max-width: 952px) {
+  nav label.logo {
+    font-size: 30px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+} */
+
+@media (max-width: 890px) {
+  .checkbtn {
+    display: block;
+  }
+  .checkbtn i {
+    color: #000;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: max-content !important;
+    background: #ebebeb;
+    backdrop-filter: blur(10px);
+    top: 10px;
+    left: -200%;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 10px;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
