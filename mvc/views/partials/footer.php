@@ -21,7 +21,7 @@
                     <li><a href="/blog">Tin tức</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 py-3">
+            <div class="col-lg-3 py-3" id="contact">
                 <h5>Liên hệ với chúng tôi</h5>
                 <p>123, đường Lý Thường Kiệt, Quận 5, Thành phố Hồ Chí Minh</p>
                 <a href="#" class="footer-link">(+84) 0123 456 789</a>
