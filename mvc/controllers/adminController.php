@@ -4,6 +4,7 @@ class adminController extends Controller{
     public function __construct() {
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
         $this->AdminMemberDB = $this->callmodel("AdminMemberDB");
+        $this->AdminOrdersDB = $this->callmodel("AdminOrdersDB");
     }
     public function show(){
         // console_log([password_hash("admin", PASSWORD_DEFAULT), uniqid()]);
@@ -92,7 +93,6 @@ class adminController extends Controller{
                     move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
                 }
             }
-            
             $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, $thumnail, $image_array);
             // if ($result) {
             //     header("Location: /admin/product");
@@ -102,7 +102,19 @@ class adminController extends Controller{
     public function orders(){
         // $menu = $this->callmodel("DishDB");
         // $menu = $menu->getDB();
-        $this->callview("admin/orders", [], "layoutAdmin");
+            $listOrders = $this->AdminOrdersDB->getAll();
+            $this->callview("admin/orders", ["listOrders" => $listOrders], "layoutAdmin");
+    }
+    public function Ordersdetail($params) {
+        // Get id from client
+        $id = $params["id"];
+        $items = $this->AdminOrdersDB->get_item_byID($id);
+        if ($items) {
+            echo json_encode($items);
+        }
+        else {
+            echo json_encode(404);
+        }
     }
     public function member(){
         // $menu = $this->callmodel("DishDB");
