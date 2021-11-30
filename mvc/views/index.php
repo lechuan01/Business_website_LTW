@@ -50,17 +50,30 @@
     </div>
 
 </div> <!-- .page-section -->
+<div class="achievement-container">
+    <h2>Hoạt động đáng chú ý</h2>
+    <div class="achieve-block">
+        <div class="ach-1 wow fadeInDown">
+            <h3 class="countfect" data-num="2"></h3>
+            <p>Năm hoạt động</p>
+        </div>
+        <div class="ach-2 wow fadeInDown" data-wow-delay="0.2s">
+            <h3 class="countfect" data-num="240"></h3>
+            <p>Sản phẩm</p>
+        </div>
+        <div class="ach-3 wow fadeInDown" data-wow-delay="0.3s">
+            <h3 class="countfect" data-num="1435"></h3>
+            <p>Khách hàng hài lòng</p>
+        </div>
+        
+    </div>
+</div>
 
 <div class="page-section" id="about">
     <div class="row align-items-center custom-about-section">
         <div class="wow fadeInUp about-content" style="text-align: justify;">
-            <span class="subhead">Về chúng tôi</span>
+            <h1>CORGEAR</h1>
             <h2 class="title-section">Công ty phân phối sản phẩm Corsair hàng đầu Việt Nam</h2>
-            <div class="divider"></div>
-
-            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
-            <!-- <a href="about.html" class="btn btn-primary mt-3">Read More</a> -->
         </div>
         <!-- <div class="col-lg-6 py-3 wow fadeInRight">
                 <div class="img-fluid py-3 text-center">

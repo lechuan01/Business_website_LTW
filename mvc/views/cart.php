@@ -12,7 +12,8 @@
                     <img src='./public/upload/products/<?= $val['thumnail']?>' alt='Image' />
                     <div class='cart-des-item'>
                         <p><?= $val['name']?></p>
-                        <p><?= $val['price']?> Đ</p>
+                        <?php $pirce_ = number_format($val['price'], 0, "", ","); ?>
+                        <p><?= $pirce_?></p>
                     </div>
                 </div>
                 <div class='cart-quantity' id="<?= $key?>" name="<?= $val['quantity']?>">

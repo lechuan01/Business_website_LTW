@@ -31,17 +31,17 @@
     <table style="margin:0 auto;" >
         <thead>
             <tr>
-                <th colspan="3">Phương thức thanh toán</th>
+                <th colspan="3" style="text-align: center;">Phương thức thanh toán</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    <button type="button" class="btn" onclick="window.location.href='#popup4'">
-                        CASH   <span class="glyphicon glyphicon-chevron-right"></span></button></td>
-                <td>
-                    <button type="button" class="btn" onclick="window.location.href='#popup5'">
-                        ONLINE   <span class="glyphicon glyphicon-chevron-right"></span></button></td>
+                <td class="d-flex">
+                    <button style="width: 50%;" type="button" class="btn btn-secondary" onclick="window.location.href='#popup4'">
+                        CASH   <span class="glyphicon glyphicon-chevron-right"></span></button>
+                    <button style="width: 50%;" type="button" class="btn btn-success" onclick="window.location.href='#popup5'">
+                        ONLINE   <span class="glyphicon glyphicon-chevron-right"></span></button>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -69,7 +69,7 @@
             <form>
                 <div class="user-box">
                     <label id="main" style="width: 320px; height: 400px;">
-                            <img src="public/img/momo.png" height="400" width="100%"/>
+                            <img src="public/img/momo.jpg" style="width: 100%; aspect-ratio: 1/1;"/>
                     </label><br>
                     <label>Thank you for using our service! See you soon.</label>   
                 </div>
