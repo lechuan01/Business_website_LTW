@@ -1,0 +1,244 @@
+Folder PATH listing for volume OS
+Volume serial number is AA85-FC6E
+C:.
+|   .htaccess
+|   assignment.pdf
+|   index.php
+|   output.txt
+|   README.md
+|   
++---.vscode
+|       launch.json
+|       
++---mvc
+|   |   index.php
+|   |   
+|   +---controllers
+|   |       Controller.php
+|   |       
+|   +---core
+|   |       App.php
+|   |       Controller.php
+|   |       DB.php
+|   |       
+|   +---models
+|   |       Model.php
+|   |       
+|   \---views
+|       |   blog.php
+|       |   blogDetail.php
+|       |   cart.php
+|       |   checkout.php
+|       |   index.php
+|       |   Login.php
+|       |   Register.php
+|       |   
+|       +---admin
+|       |       blog.php
+|       |       comment.php
+|       |       dashboard.php
+|       |       header.php
+|       |       member.php
+|       |       orders.php
+|       |       product.php
+|       |       
+|       +---layout
+|       |       layout.php
+|       |       layoutAdmin.php
+|       |       
+|       \---partials
+|               footer.php
+|               header.php
+|               
++---public
+|   +---bootstrap
+|   |   +---css
+|   |   |      
+|   |   \---js
+|   |               
+|   +---css
+|   |   |   app.css
+|   |                
+|   |   +---js
+|   |   |       all.js
+|   |           
+|   +---fonts
+|   |       maicons.eot
+|   |       maicons.svg
+|   |       maicons.ttf
+|   |       maicons.woff
+|   |       
+|   +---images
+|   |       0d26c62c-6113-422b-83fa-b16d1c5e8899.jpg
+|   |       4022311_Corsair_K63-2.jpg
+|   |       5510059_194111351_4354441971253318_4592268824123829596_n.jpg
+|   |       banner-3.jpg
+|   |       Corsair-K63-800x446.jpg
+|   |       corsair-k65-rgb-mini-07.jpg
+|   |       Corsair-M65-RGB-Elite.jpg
+|   |       d9mrd0c-d95eeca4-1d26-491f-9002-d8167994077c.jpg
+|   |       pcx_corsairk63_01.jpg
+|   |       QeAPsgjcEeKO2v8u.jpg
+|   |       switch-cua-ban-phim-corsair-k65-mini-red-sw-usb-rgb-red-switch.jpg
+|   |       
+|   +---img
+|   |   |   about.jpg
+|   |   |   about_frame.png
+|   |   |   banner_image_1.svg
+|   |   |   banner_image_2.svg
+|   |   |   bg_pattern.svg
+|   |   |   world_pattern.svg
+|   |   |   
+|   |   +---blog
+|   |   |       aq.jpg
+|   |   |       b4954fd7c730a136efc696c96edabd6d-scaled-1-1024x576.jpg
+|   |   |       blog-1.jpg
+|   |   |       blog-2.jpg
+|   |   |       blog-3.jpg
+|   |   |       blog-4.jpg
+|   |   |       blog-5.jpg
+|   |   |       blog-6.jpg
+|   |   |       Chip-with-flag-1024x576.jpg
+|   |   |       chip1068x580.jpg
+|   |   |       DSC_1102-min.jpg
+|   |   |       epic-games-store-black-friday-banner.jpg
+|   |   |       Game-nhap-vai-Steampunk-9-1.jpg
+|   |   |       https3A2F2Fs3-ap-northeast-1.amazonaws.com2Fpsh-ex-ftnikkei-3937bb42Fimages2F52F72F52F42F21384575-1-eng-GB2F0730569-1024x576.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Jupiter_Lifestyle-shot_Male_Oxygen-Blood_EN_JPG_20210916-min.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Jupiter_Lifestyle-shot_Male_Skiing_EN_JPG_20210916-min-1.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Jupiter_Lifestyle-shot_Male_Skiing_EN_JPG_20210916.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Jupiter_Lifestyle-shot_?_??_EN_JPG_20210910-min.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Jupiter_Lifestyle-shot_?_??_EN_JPG_20210910-min-1.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Jupiter_Lifestyle-shot_?_??_EN_JPG_20210910-min.jpg
+|   |   |       MKT_Jupiter_Milo_Creative-Lifestyle-Shot_HQ_MKT_Milo_Lifestyle-shot_Female_Cycling_EN_JPG_20210916-min.jpg
+|   |   |       Nho-ngoi-khong-dung-lon-de-moi-lung-chiec-ghe-gaming-la-cuu-canh-cua-minh-4.jpg
+|   |   |       top_banner_GVN-scaled.jpg
+|   |   |       Watch.jpg
+|   |   |       xlarge-1068x580.jpg
+|   |   |       Z6Z_8382-1-min.jpg
+|   |   |       
+|   |   +---person
+|   |   |       person_1.jpg
+|   |   |       person_2.jpg
+|   |   |       person_3.jpg
+|   |   |       person_4.jpg
+|   |   |       
+|   |   \---services
+|   |           service-1.svg
+|   |           service-2.svg
+|   |           service-3.svg
+|   |           
+|   +---js
+|   |   |   app.js
+|   |   |   blog.js
+|   |   |   blogDetail.js
+|   |   |   bootstrap.bundle.min.js
+|   |   |   cart.js
+|   |   |   dataTables.bootstrap5.min.js
+|   |   |   google-maps.js
+|   |   |   jquery-3.6.0.min.js
+|   |   |   jquery.dataTables.min.js
+|   |   |   login.js
+|   |   |   productDetail.js
+|   |   |   products.js
+|   |   |   register.js
+|   |   |   slick.js
+|   |   |   theme.js
+|   |   |   
+|   |   \---admin
+|   |           product.js
+|   |           
+|   +---material-icons
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---css
+|   |   |       material-icons.css
+|   |   |       material-icons.min.css
+|   |   |       material-icons.scss
+|   |   |       _codepoints.scss
+|   |   |       _mixins.scss
+|   |   |       _variables.scss
+|   |   |       
+|   |   \---iconfont
+|   |           filled.css
+|   |           filled.scss
+|   |           material-icons-outlined.woff
+|   |           material-icons-outlined.woff2
+|   |           material-icons-round.woff
+|   |           material-icons-round.woff2
+|   |           material-icons-sharp.woff
+|   |           material-icons-sharp.woff2
+|   |           material-icons-two-tone.woff
+|   |           material-icons-two-tone.woff2
+|   |           material-icons.css
+|   |           material-icons.scss
+|   |           material-icons.woff
+|   |           material-icons.woff2
+|   |           outlined.css
+|   |           outlined.scss
+|   |           round.css
+|   |           round.scss
+|   |           sharp.css
+|   |           sharp.scss
+|   |           two-tone.css
+|   |           two-tone.scss
+|   |           _mixins.scss
+|   |           _variables.scss
+|   |           
+|   +---upload
+|   |   |   corsair-banner.png
+|   |   |   corsair-case.jpg
+|   |   |   corsair-headphone.jpg
+|   |   |   corsair-k65-rgb-mini.jpeg
+|   |   |   Corsair-M65-RGB-Elite.jpg
+|   |   |   ezgif.com-gif-maker.jpg
+|   |   |   
+|   |   \---products
+|   |           1.jpg
+|   |           2.jpg
+|   |           275R_1.jpg
+|   |           275R_2.jpg
+|   |           275R_3.jpg
+|   |           275R_4.jpg
+|   |           bacon-rings-103588-1.jpeg
+|   |           ban-phim-co-corsair-k65-mini.jpg
+|   |           ban-phim-corsair-k65-mini-apshop-2_e9c729a47d4f42398e985b042b7a3231.jpg
+|   |           cac-mon-an-chinh-cua-nguoi-chau-au-06-min.jpg
+|   |           chuot-khong-day-gaming-corsair-iron-claw-rgb-den-2-1.jpg
+|   |           corsair-iron-claw-rgb-khong-day_b131b33059804a2aba91e519f3bc23ec.jpg
+|   |           CORSAIR-IRONCLAW-RGB-WIRELESS.png
+|   |           corsair-k100-rgb-26.jpg
+|   |           corsair-k100-rgb-mechanical-gaming-keyboard-danh-gia-gaming-gear-3-1140x760.jpg
+|   |           corsair-k63-wire.jpg
+|   |           Corsair-K65-RGB-MINI-CHERRY-MX-Red-1.jpg
+|   |           gearvn_corsair_ironclawwireless_1_8f3839ce11c64de19a278c31fa2d5c21.png
+|   |           HS80_1.jpg
+|   |           HS80_2.jpg
+|   |           HS80_3.jpg
+|   |           HS80_4.jpg
+|   |           img_7229_1509dab752bf4f27a15ac210122b92df.jpg
+|   |           K63_1.jpg
+|   |           K63_2.jpeg
+|   |           K63_3.jpg
+|   |           K63_4.jpg
+|   |           K65_1.jpg
+|   |           K65_2.jpg
+|   |           K65_3.jpg
+|   |           K65_4.png
+|   |           M65_1.jpg
+|   |           M65_2.jpg
+|   |           M65_3.jpg
+|   |           M65_4.jpg
+|   |           maxresdefault.jpg
+|   |           thegioigear_mechanical_keyboard_corsair_k100_rgb_4_5d76d09b3a7d426d8b1c35549e0a1dfa.jpeg
+|   |           
+|   \---vendor
+|       +---animate
+|       |       animate.css
+|       |       
+|       \---wow
+|               wow.min.js
+|               
+        

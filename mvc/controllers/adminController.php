@@ -4,6 +4,7 @@ class adminController extends Controller{
     public function __construct() {
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
         $this->AdminMemberDB = $this->callmodel("AdminMemberDB");
+        $this->UserDB = $this->callmodel("UserDB");
     }
     public function show(){
         // console_log([password_hash("admin", PASSWORD_DEFAULT), uniqid()]);
@@ -27,22 +28,37 @@ class adminController extends Controller{
         if (isset($_POST["submit"])) {
             $name = $_POST["name"];
             $specs = $_POST["specs"];
-            $price = $_POST["price"];
-            $qty = $_POST["qty"];
-            $category = $_POST["category"];
-            if (isset($_FILES["thumnail"])) {
-                $file_name = $_FILES['thumnail']['name'];
-                $file_tmp = $_FILES['thumnail']['tmp_name'];
-                move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
-                $image_array = [];
-                foreach($_FILES["product_image"]["name"] as $key => $val) {
-                    array_push($image_array, $_FILES["product_image"]["name"][$key]);
-                    move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
+            $check_price = is_numeric($_POST["price"]);
+            if ($check_price) {
+                $price = $_POST["price"];
+                $qty = $_POST["qty"];
+                $category = $_POST["category"];
+                if (isset($_FILES["thumnail"])) {
+                    $file_name = $_FILES['thumnail']['name'];
+                    $file_tmp = $_FILES['thumnail']['tmp_name'];
+                    move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
+                    $image_array = [];
+                    $numOfImages = count($_FILES["product_image"]['name']);
+                    if ($numOfImages != 4) {
+                        alert("BẠN CẦN TẢI LÊN ĐÚNG 4 TẤM ẢNH");
+                    }
+                    else {
+                        foreach($_FILES["product_image"]["name"] as $key => $val) {
+                            array_push($image_array, $_FILES["product_image"]["name"][$key]);
+                            move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
+                        }
+                    }
+                }
+                $result = $this->AdminProductDB->insert($name, $specs, $price, $qty, $category, $file_name, $image_array);
+                if ($result == "true") {
+                    header("Location: /admin/product");
+                }
+                else {
+                    alert($result);
                 }
             }
-            $result = $this->AdminProductDB->insert($name, $specs, $price, $qty, $category, $file_name, $image_array);
-            if ($result) {
-                header("Location: /admin/product");
+            else {
+                alert("GIÁ TIỀN KHÔNG HỢP LỆ");
             }
         }
     }
@@ -75,28 +91,36 @@ class adminController extends Controller{
             $id = $params["id"];
             $name = $_POST["name"];
             $specs = $_POST["specs"];
-            $price = $_POST["price"];
-            $qty = $_POST["qty"];
-            $category = $_POST["category"];
-            $thumnail = null;
-            $image_array = [];
-            if (isset($_FILES["thumnail"])) {
-                $file_name = $_FILES['thumnail']['name'];
-                $thumnail = $file_name;
-                $file_tmp = $_FILES['thumnail']['tmp_name'];
-                move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
-            }
-            if (isset($_FILES["product_image"])) {
-                foreach($_FILES["product_image"]["name"] as $key => $val) {
-                    array_push($image_array, $_FILES["product_image"]["name"][$key]);
-                    move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
+            $check_price = is_numeric($_POST["price"]);
+            if ($check_price) {
+                $price = $_POST["price"];
+                $qty = $_POST["qty"];
+                $category = $_POST["category"];
+                $thumnail = null;
+                $image_array = [];
+                if (isset($_FILES["thumnail"])) {
+                    $file_name = $_FILES['thumnail']['name'];
+                    $thumnail = $file_name;
+                    $file_tmp = $_FILES['thumnail']['tmp_name'];
+                    move_uploaded_file($file_tmp, "public/upload/products/".$file_name);
+                }
+                if (isset($_FILES["product_image"])) {
+                    foreach($_FILES["product_image"]["name"] as $key => $val) {
+                        array_push($image_array, $_FILES["product_image"]["name"][$key]);
+                        move_uploaded_file($_FILES["product_image"]["tmp_name"][$key], "public/upload/products/".$val);
+                    }
+                }
+                $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, $thumnail, $image_array);
+                if ($result == "true") {
+                    header("Location: /admin/product");
+                }
+                else {
+                    alert($result);
                 }
             }
-            
-            $result = $this->AdminProductDB->updateById($id, $name, $specs, $price, $qty, $category, $thumnail, $image_array);
-            // if ($result) {
-            //     header("Location: /admin/product");
-            // }
+            else {
+                alert("GIÁ TIỀN KHÔNG HỢP LỆ");
+            }
         }
     }
     public function orders(){
@@ -109,6 +133,18 @@ class adminController extends Controller{
         // $menu = $menu->getDB();
         $members = $this->AdminMemberDB->getAll();
         $this->callview("admin/member", ["members" => $members], "layoutAdmin");
+    }
+    public function memberRestrict() {
+        if (isset($_POST["id"])) {
+            $id = $_POST["id"];
+            $res = $this->UserDB->restrictUser($id);
+            if ($res == "true") {
+                echo json_decode(200);
+            }
+            else {
+                echo json_encode($res);
+            }
+        }
     }
     public function blog(){
         // $menu = $this->callmodel("DishDB");

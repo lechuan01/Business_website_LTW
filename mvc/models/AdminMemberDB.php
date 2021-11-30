@@ -4,7 +4,7 @@ class AdminMemberDB extends DB
 {
     public function getAll()
     {
-        $array = "SELECT id, full_name, phone_number, email, `address` FROM `accounts` WHERE `role` = 'MEM';";
+        $array = "SELECT id, full_name, phone_number, email, `address`, accept FROM `accounts` WHERE `role` = 'MEM';";
         $array = mysqli_query($this->connect, $array);
         $result = [];
         while ($s = mysqli_fetch_array($array, MYSQLI_ASSOC)) {

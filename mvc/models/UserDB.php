@@ -49,7 +49,16 @@ class UserDB extends DB{
             return mysqli_error($this->connect);
         }
     }
-    
+    function restrictUser($id) {
+        $sql = "UPDATE accounts SET accept = 'F' WHERE id = '$id'";
+        $res = $this->connect->query($sql);
+        if ($res) {
+            return "true";
+        }
+        else {
+            return mysqli_error($this->connect);
+        }
+    }
 }
 
 ?>
