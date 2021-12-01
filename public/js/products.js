@@ -49,6 +49,12 @@ $(document).ready(function () {
         else if ($('#SORT').val() == 'pricereduce') {
             SortPrice(desc_price);
         }
+        else if ($('#SORT').val() == 'nameasc') {
+            SortName(asc_name);
+        }
+        else if ($('#SORT').val() == 'namedesc') {
+            SortName(desc_name);
+        }
         else {
             $(".product-items > div").sort(newold).appendTo('.product-items');
         }
@@ -56,7 +62,11 @@ $(document).ready(function () {
     function SortPrice(func) {
         $(".product-items > div").sort(func).appendTo('.product-items');
     }
+    function SortName(func) {
+        $(".product-items > div").sort(func).appendTo('.product-items');
+    }
     function newold(a, b) {
+        console.log(a);
         return ($(a).attr('id') > $(b).attr('id')) ? -1 : 1;
     }
     // Sắp xếp giá tăng dần
@@ -71,5 +81,17 @@ $(document).ready(function () {
         b = $(b).children('div:last-child').attr('name');
         return (a > b) ? -1 : 1;
     }
-
+    // Sắp xếp giá tăng dần
+    function asc_name(a, b) {
+        a = $(a).children('div:last-child').children('a').text();
+        b = $(b).children('div:last-child').children('a').text();
+        
+        return (a > b) ? 1 : -1;
+    }
+    // Sắp xếp gia giảm dần
+    function desc_name(a, b) {
+        a = $(a).children('div:last-child').children('a').text();
+        b = $(b).children('div:last-child').children('a').text();
+        return (a > b) ? -1 : 1;
+    }
 });
