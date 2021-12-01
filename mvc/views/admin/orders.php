@@ -27,7 +27,7 @@
                         <td><?php echo $order["create_date"]; ?></td>
                         <td class="d-flex">
                             <button type="button" class="btn btn-warning detail-order" data-bs-toggle="modal" data-bs-target="#exampleModal-detail" data-id="<?php echo $order["id"]; ?>">Xem chi tiết</button>
-                            <button type="button" style= "margin-left : 15px" class="btn btn-danger complete-order onclick="confirm('Bạn chắc chắn xác nhận hoàn tất đơn này?')" data-id="<?php echo $order["id"]; ?>">Hoàn tất</button>
+                            <button type="button" style= "margin-left : 15px" class="btn btn-danger complete-order" onclick="confirm('Bạn chắc chắn xác nhận hoàn tất đơn này?')" data-id="<?php echo $order["id"]; ?>">Hoàn tất</button>
                         </td>
                     </tr>
                 <?php } ?>

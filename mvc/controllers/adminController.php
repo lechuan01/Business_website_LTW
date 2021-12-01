@@ -5,6 +5,8 @@ class adminController extends Controller{
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
         $this->AdminMemberDB = $this->callmodel("AdminMemberDB");
         $this->AdminOrdersDB = $this->callmodel("AdminOrdersDB");
+        $this->AdminCommentDB = $this->callmodel("AdminCommentDB");
+
         $this->UserDB = $this->callmodel("UserDB");
     }
     public function show(){
@@ -292,6 +294,31 @@ class adminController extends Controller{
     //     $this->callview("admin/blog", [], "layoutAdmin");
     // }
     public function comment(){
-        $this->callview("admin/comment", [], "layoutAdmin");
+        // $menu = $this->callmodel("DishDB");
+        // $menu = $menu->getDB();
+        $listComments = $this->AdminCommentDB->getAll();
+            $this->callview("admin/comment", ["listComments" => $listComments], "layoutAdmin");
+        //$this->callview("admin/comment", [], "layoutAdmin");
+    }
+    public function commentDelete() {
+        $id = $_POST["id"];
+        $m_id = $_POST["m_id"];
+        $res = $this->AdminCommentDB->deleteComment($id,$m_id);
+       if ($res) {
+           echo true;
+       }
+       else {
+           echo false;
+       }
+    }
+    public function listComment() {
+        // Get id from client
+        $items = $this->AdminCommentDB->listcomment();
+        if ($items) {
+            echo json_encode($items);
+        }
+        else {
+            echo json_encode(404);
+        }
     }
 }
