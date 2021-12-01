@@ -11,13 +11,13 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/orders">Quản lý đơn hàng</a>
+                        <a class="nav-link active" href="/admin/orders">Quản lý đơn hàng</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/comment">Quản lý bình luận</a>
+                        <a class="nav-link active" href="/admin/comment">Quản lý bình luận</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/product">Quản lý sản phẩm</a>
+                        <a class="nav-link active" href="/admin/product">Quản lý sản phẩm</a>
                     </li>
                 </ul>
                 <?php if (!empty($_SESSION["idadmin"])) { ?>

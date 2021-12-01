@@ -1,0 +1,54 @@
+.select-option-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.select-option-block .select-1,
+.select-option-block .select-2,
+.select-option-block .select-3,
+.select-option-block .select-4 {
+    width: 100%;
+    height: 200px;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.select-1 {
+    background: rgba(33, 81, 255, 0.1);
+}
+.select-2 {
+    background: rgb(255, 73, 67, 0.1);
+}
+.select-3 {
+    background: rgba(45, 43, 58, 0.1);
+}
+.select-4 {
+    background: rgba(53, 187, 120, 0.1);
+}
+.select-1:hover, .select-2:hover, .select-3:hover, .select-4:hover {
+    transform: scale(1.1, 1.1);
+}
+.select-1 h1 a {
+    color: #2152ff;
+}
+.select-2 h1 a {
+    color: rgb(255, 73, 67);
+}
+.select-3 h1 a {
+    color: rgb(45, 43, 58);
+}
+.select-4 h1 a {
+    color:rgb(53, 187, 120);
+}
+@media screen and (max-width: 773px) {
+    .select-option-block {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+}
