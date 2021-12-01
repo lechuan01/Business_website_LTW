@@ -5,9 +5,9 @@
             <tr>
                 <th>Mã Đơn</th>
                 <th>Ngày Đặt</th>
-                <th>Phương thức Thanh toán</th>
+                <th>Thanh toán</th>
                 <th>Giá</th>
-                <th>Tình trạng đơn</th>
+                <th>Tình trạng</th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -30,11 +30,7 @@
         </table>
     </div>
 </div>
-<style>
-    img{
-        width:50px;
-    }
-</style>
+
 
 <!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -51,7 +47,7 @@
       </div>
       <div class="modal-body">
         <div>
-            <table id="table-orderdetail" class="table table-hover"></table>
+            <table id="table-orderdetail"></table>
         </div>
       </div>
       <div class="modal-footer">
@@ -60,3 +56,13 @@
     </div>
   </div>
 </div>
+<style>
+    img{
+        width:90px;
+    }
+    @media screen and (max-width: 390px) {
+        img{
+        display: none;
+    }
+    }
+</style>

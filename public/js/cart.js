@@ -87,10 +87,11 @@ $(document).ready(function () {
                 "id": e.target.parentNode.parentNode.id
             },
             success: function(res) {
-                var x=JSON.parse(res),string;
+                var x=JSON.parse(res),string='<tr><th>Tên</th><th>Số lượng</th><th>Giá</th></tr>';
+                $('#table-orderdetail').append(string);
                 x.forEach(element => {
                     string = '<tr>'
-                    string += '<td>'+element['name']+'</td>'
+                    string += '<td><a href="/product/productDetail?id='+element['product_id']+'">'+element['name']+'</a></td>'
                     string += '<td>'+element['quantity']+'</td>'
                     string += '<td>'+formatter.format(element['price'])+'</td>'
                     string += '<td><img src="/public/upload/products/'+element['thumnail']+'"></td>'
