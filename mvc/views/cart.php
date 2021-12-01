@@ -49,7 +49,11 @@
 
             </div>
             <div class="process-to-checkout">
+                <?php if(!empty($_SESSION["id"])) { ?>
                 <a class="checkout-button" href="/checkout">Thanh toán</a>
+                <?php } else{ ?>
+                <a class="checkout-button" href="/login">Thanh toán</a>
+                <?php } ?>
             </div>
         </div>
         <?php }else {?> 
