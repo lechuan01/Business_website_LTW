@@ -27,7 +27,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenu2">
                             <li><a class="dropdown-item" href="/admin">Quản lý</a></li>
-                            <li><a class="dropdown-item" href="#" id="logout" name="logout" style="color: red;">Đăng xuất</a></li>
+                            <li><a class="dropdown-item" href="/admin/loggout" style="color: red;">Đăng xuất</a></li>
                         </ul>
                     </div>
                 <?php } ?>

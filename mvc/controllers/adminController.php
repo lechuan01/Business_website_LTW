@@ -321,4 +321,12 @@ class adminController extends Controller{
             echo json_encode(404);
         }
     }
+    public function loggout() {
+        if (isset($_SESSION["idadmin"])) {
+            unset($_SESSION["idadmin"]);
+            if(session_destroy()){
+                header("Location: /");
+            }
+        }
+    }
 }
