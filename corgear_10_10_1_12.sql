@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2021 at 04:04 PM
+-- Generation Time: Dec 01, 2021 at 04:10 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.24
 
@@ -16,8 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
-create database if not exists corgear;
-use corgear;
+
 --
 -- Database: `corgear`
 --
@@ -46,7 +45,8 @@ CREATE TABLE `accounts` (
 INSERT INTO `accounts` (`id`, `full_name`, `password`, `phone_number`, `email`, `address`, `role`, `accept`) VALUES
 ('61a4c2465a3f1', 'Nguyễn Thiên Bảo', '$2y$10$NjTLaTFlUtWgYT4amZJIbes711IgE9QSIRE.SI1awnLwwF/Kpzfky', '0936010095', 'baonguyen@gmail.com', '12, đường số 3, quận 4, TPHCM', 'MEM', 'T'),
 ('61a5c2296dfa4', 'ADMINISTRATOR', '$2y$10$LgctFE0929e3obD7z0bhXemCCLDZnar7dmiGlByfh.OP1u4hp/f72', '0123456789', 'admin_corgear@gmail.com', '145, đường Trần Hưng Đạo, quận 5, TPHCM', 'ADM', 'T'),
-('61a633c11b670', 'Nguyễn Thiên Phúc', '$2y$10$r0lYCWHdI8TWvKhDK.hIgew1F2YIFUPR/xxAwPqkHVSuMwp65kyca', '0978564378', 'phucnguyen@gmail.com', '12, đường số 9', 'MEM', 'T');
+('61a633c11b670', 'Nguyễn Thiên Phúc', '$2y$10$r0lYCWHdI8TWvKhDK.hIgew1F2YIFUPR/xxAwPqkHVSuMwp65kyca', '0978564378', 'phucnguyen@gmail.com', '12, đường số 9', 'MEM', 'T'),
+('61a63f7a328da', 'Lê Minh Chuẩn', '$2y$10$Hl1A4R988ug3Yy/ab50Gbu/21meUYWBR7IeLIOVziJAuMM.xwa5BO', '0912345678', 'lechuan@gmail.com', '75 Lê Lợi, quận 1, TP HCM', 'MEM', 'F');
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,21 @@ CREATE TABLE `belong` (
 --
 
 INSERT INTO `belong` (`order_id`, `product_id`, `quantity`, `price`) VALUES
-(108556449, 10002, 2, 1600000);
+(108556449, 10002, 2, 1600000),
+(342563091, 10001, 2, 2000000),
+(342563091, 10004, 1, 1900000),
+(376491129, 10001, 1, 2000000),
+(376491129, 10002, 1, 1600000),
+(510088899, 10001, 1, 2000000),
+(510088899, 10002, 2, 1600000),
+(510088899, 10004, 1, 1900000),
+(570367070, 10003, 1, 3300000),
+(570367070, 10005, 2, 1600000),
+(798279632, 10003, 1, 3300000),
+(798279632, 10004, 2, 1900000),
+(842290960, 10004, 1, 1900000),
+(990980322, 10003, 1, 3300000),
+(990980322, 10004, 1, 1900000);
 
 -- --------------------------------------------------------
 
@@ -198,7 +212,14 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `status`, `payment_type`, `create_date`, `cost`, `member_id`) VALUES
-(108556449, 'Đang xử lý', 'cash', '2021-11-29 19:22:03', 3520000, '61a4c2465a3f1');
+(108556449, 'Đã hoàn thành', 'cash', '2021-10-29 19:22:03', 3520000, '61a4c2465a3f1'),
+(342563091, 'Đã hoàn thành', 'cash', '2021-11-30 22:14:58', 6490000, '61a63f7a328da'),
+(376491129, 'Đang xử lý', 'online', '2021-09-30 22:14:01', 3960000, '61a633c11b670'),
+(510088899, 'Đang xử lý', 'cash', '2021-11-30 23:36:22', 7810000, '61a633c11b670'),
+(570367070, 'Đang xử lý', 'online', '2021-08-30 22:15:35', 7150000, '61a63f7a328da'),
+(798279632, 'Đã Hủy', 'online', '2021-12-01 08:27:51', 7810000, '61a4c2465a3f1'),
+(842290960, 'Đang xử lý', 'cash', '2021-09-30 22:15:14', 2090000, '61a633c11b670'),
+(990980322, 'Đang xử lý', 'online', '2021-12-01 09:20:33', 5720000, '61a4c2465a3f1');
 
 -- --------------------------------------------------------
 
@@ -282,7 +303,12 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`product_id`, `mark`, `comments`, `member_id`) VALUES
-(10002, 762767265, 'Bàn phím rất ngon trong tầm giá', '61a4c2465a3f1');
+(10001, 6, 'Sản phẩm rất tốt.', '61a5c2296dfa4'),
+(10002, 8, 'Bàn phím rất ngon trong tầm giá', '61a4c2465a3f1'),
+(10002, 9, 'Hàng chất lượng cao.', '61a5c2296dfa4'),
+(10003, 6, 'Trên cả tuyệt vời', '61a633c11b670'),
+(10005, 7, 'Sản phẩm tốt, nhân viên tư vấn nhiệt tình.', '61a4c2465a3f1'),
+(10005, 7, 'Tốt lắm.', '61a5c2296dfa4');
 
 --
 -- Indexes for dumped tables
@@ -355,7 +381,7 @@ ALTER TABLE `blog_content`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10007;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10009;
 
 --
 -- Constraints for dumped tables
@@ -367,6 +393,12 @@ ALTER TABLE `product`
 ALTER TABLE `belong`
   ADD CONSTRAINT `belong_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `belong_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product_image`
