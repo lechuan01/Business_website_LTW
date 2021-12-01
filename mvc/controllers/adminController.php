@@ -4,6 +4,7 @@ class adminController extends Controller{
     public function __construct() {
         $this->AdminProductDB = $this->callmodel("AdminProductDB");
         $this->AdminMemberDB = $this->callmodel("AdminMemberDB");
+        $this->AdminOrdersDB = $this->callmodel("AdminOrdersDB");
         $this->UserDB = $this->callmodel("UserDB");
     }
     public function show(){
@@ -126,7 +127,29 @@ class adminController extends Controller{
     public function orders(){
         // $menu = $this->callmodel("DishDB");
         // $menu = $menu->getDB();
-        $this->callview("admin/orders", [], "layoutAdmin");
+            $listOrders = $this->AdminOrdersDB->getAll();
+            $this->callview("admin/orders", ["listOrders" => $listOrders], "layoutAdmin");
+    }
+    public function Ordersdetail($params) {
+        // Get id from client
+        $id = $params["id"];
+        $items = $this->AdminOrdersDB->get_item_byID($id);
+        if ($items) {
+            echo json_encode($items);
+        }
+        else {
+            echo json_encode(404);
+        }
+    }
+    public function completeOrder() {
+             $id = $_POST["id"];
+            $res = $this->AdminOrdersDB->completeOrderbyid($id);
+            if ($res) {
+                echo true;
+            }
+            else {
+                echo false;
+            }
     }
     public function member(){
         // $menu = $this->callmodel("DishDB");

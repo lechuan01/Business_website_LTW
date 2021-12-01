@@ -1,6 +1,6 @@
 <div>
     <h1>Đơn hàng của tôi</h1>
-    <div>
+    <div class="order-container">
         <table>
             <tr>
                 <th>Mã Đơn</th>
