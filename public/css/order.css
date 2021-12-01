@@ -1,0 +1,9 @@
+.order-container {
+    width: 100%;
+}
+.order-container h1 {
+    text-align: center;
+}
+.order-container table {
+    margin: 0 auto;
+}
