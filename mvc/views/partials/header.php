@@ -23,11 +23,18 @@
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Hi, <?php if (isset($_SESSION['name'])) echo $_SESSION['name']; ?>
                         </button>
-                        <ul class="dropdown-menu" style="height: max-content;" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="/profile">Tài khoản của tôi</a></li>
-                            <li><a class="dropdown-item" href="/order">Đơn hàng</a></li>
-                            <li><a class="dropdown-item" href="#" id="logout" name="logout" style="color: red;">Đăng Xuất</a></li>
-                        </ul>
+                        <?php if (!isset($_SESSION["idadmin"])) { ?>
+                            <ul class="dropdown-menu" style="height: max-content;" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/profile">Tài khoản của tôi</a></li>
+                                <li><a class="dropdown-item" href="/order">Đơn hàng</a></li>
+                                <li><a class="dropdown-item" href="#" id="logout" name="logout" style="color: red;">Đăng Xuất</a></li>
+                            </ul>
+                        <?php } else {?>
+                            <ul class="dropdown-menu" style="height: max-content;" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/admin">Quản lý</a></li>
+                                <li><a class="dropdown-item" href="#" id="logout" name="logout" style="color: red;">Đăng Xuất</a></li>
+                            </ul>
+                            <?php }?>
                     </div>
                 <?php } ?>
             </li>
