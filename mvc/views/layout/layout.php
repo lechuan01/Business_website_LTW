@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Gaming</title>
+    <title>Corgear Gaming</title>
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
 
