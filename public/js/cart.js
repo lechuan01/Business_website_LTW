@@ -78,4 +78,40 @@ $(document).ready(function () {
             }
         });
     }
+    $('button[name=orderDetail]').click(function(e){
+        $('#table-orderdetail').children().remove();
+        $.ajax({
+            url: "/order/showdetail",
+            method: "POST",
+            data: {
+                "id": e.target.parentNode.parentNode.id
+            },
+            success: function(res) {
+                var x=JSON.parse(res),string='<tr><th>Tên</th><th>Số lượng</th><th>Giá</th></tr>';
+                $('#table-orderdetail').append(string);
+                x.forEach(element => {
+                    string = '<tr>'
+                    string += '<td><a href="/product/productDetail?id='+element['product_id']+'">'+element['name']+'</a></td>'
+                    string += '<td>'+element['quantity']+'</td>'
+                    string += '<td>'+formatter.format(element['price'])+'</td>'
+                    string += '<td><img src="/public/upload/products/'+element['thumnail']+'"></td>'
+                    string += '</tr>'
+                    $('#table-orderdetail').append(string);
+                });
+            }
+        });
+    });
+    $('button[name=Cancelorder]').click(function(e){
+        $.ajax({
+            url: "/order/cancel",
+            method: "POST",
+            data: {
+                "id": e.target.parentNode.parentNode.id
+            },
+            success: function(res) {
+                location.reload();
+            }
+        });
+    });
+    
 })

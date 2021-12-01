@@ -11,9 +11,11 @@
                 <div class="product-info">
                     <img src='./public/upload/products/<?= $val['thumnail']?>' alt='Image' />
                     <div class='cart-des-item'>
-                        <p><?= $val['name']?></p>
-                        <?php $pirce_ = number_format($val['price'], 0, "", ","); ?>
-                        <p><?= $pirce_?></p>
+                        <a href="/product/productDetail?id=<?= $key?>">
+                            <p><?= $val['name']?></p>
+                            <?php $pirce_ = number_format($val['price'], 0, "", ","); ?>
+                            <p><?= $pirce_?></p>
+                        </a>  
                     </div>
                 </div>
                 <div class='cart-quantity' id="<?= $key?>" name="<?= $val['quantity']?>">
@@ -49,7 +51,11 @@
 
             </div>
             <div class="process-to-checkout">
+                <?php if(!empty($_SESSION["id"])) { ?>
                 <a class="checkout-button" href="/checkout">Thanh toán</a>
+                <?php } else{ ?>
+                <a class="checkout-button" href="/login">Thanh toán</a>
+                <?php } ?>
             </div>
         </div>
         <?php }else {?> 

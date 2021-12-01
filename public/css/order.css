@@ -1,0 +1,20 @@
+@import "variables.css";
+.order-container {
+    width: 100%;
+    background: #fff;
+    box-shadow: var(--shadow);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.order-container h1 {
+    text-align: center;
+}
+.order-container table {
+    margin: 0 auto;
+    width: 900px;
+}
+@media screen and (max-width: 900px) {
+    .order-container {
+        overflow-x: auto;
+    }
+}

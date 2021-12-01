@@ -61,11 +61,20 @@ class loginController extends Controller{
     
     #đăng xuất khỏi hệ thống
     public function logout(){
-        unset($_SESSION["id"]);
-        if(session_destroy()){
-            echo 'true';
+        if (isset($_SESSION["idadmin"])) {
+            unset($_SESSION["idadmin"]);
+            if(session_destroy()){
+                echo 'true';
+            }
+            else echo 'false';
         }
-        else echo 'false';
+        else {
+            unset($_SESSION["id"]);
+            if(session_destroy()){
+                echo 'true';
+            }
+            else echo 'false';
+        }
     }
 }
 

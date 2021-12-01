@@ -27,8 +27,8 @@
     <div class="product-filter">
         <select class="form-select" name="" id="SORT">
             <option value="newold">Mới nhất</option>
-            <option value="newold">Từ A - Z</option>
-            <option value="newold">Từ Z - A</option>
+            <option value="nameasc">Từ A - Z</option>
+            <option value="namedesc">Từ Z - A</option>
             <option value="priceincrease">Giá thấp đến cao</option>
             <option value="pricereduce">Giá cao đến thấp</option>
         </select>
