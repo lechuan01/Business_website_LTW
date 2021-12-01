@@ -92,7 +92,7 @@ $(document).ready(function () {
                     string = '<tr>'
                     string += '<td>'+element['name']+'</td>'
                     string += '<td>'+element['quantity']+'</td>'
-                    string += '<td>'+element['price']+'</td>'
+                    string += '<td>'+formatter.format(element['price'])+'</td>'
                     string += '<td><img src="/public/upload/products/'+element['thumnail']+'"></td>'
                     string += '</tr>'
                     $('#table-orderdetail').append(string);

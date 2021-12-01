@@ -6,13 +6,13 @@
             <table>
                 <tr>
                     <th>Tên Sản phẩm</th>
-                    <th>Giá</th>
+                    <th>Giá (đ)</th>
                     <th>Số lượng</th>
                 </tr>
                 <?php $_SESSION['pay']=0; foreach ($_SESSION['Cart'] as $key => $value) { $_SESSION['pay']+=$value['price']*$value['choose']; ?>
                 <tr>
                     <td><?= $value['name']?></td>
-                    <td><?= $value['price']?></td>
+                    <td><?= number_format($value['price'], 0, "", ",")?></td>
                     <td><?= $value['choose']?></td>
                 </tr>
                 <?php } $_SESSION['pay']=$_SESSION['pay']*1.1; ?>
@@ -23,7 +23,7 @@
                 </tr>
                 <tr>
                     <th>Tổng giá:</th>
-                    <td id="total-price"><?= $_SESSION['pay']?></td>
+                    <td id="total-price"><?= number_format($_SESSION['pay'], 0, "", ",")?></td>
                     <td></td>
                 </tr>
             </table>

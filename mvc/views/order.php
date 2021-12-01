@@ -14,7 +14,7 @@
                 <td><?= $value['id']?></td>
                 <td><?= $value['create_date']?></td>
                 <td><?= $value['payment_type']?></td>
-                <td><?= $value['cost']?></td>
+                <td><?= number_format($value['cost'], 0, "", ",")?> đ</td>
                 <td><?= $value['status']?></td>
                 <td><button name="orderDetail" class="btn btn-primary">Chi tiết</button></td>
                 <?php if($value['status'] == 'Đang xử lý'){ ?>
