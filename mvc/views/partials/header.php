@@ -16,7 +16,7 @@
                     <span id="quantity-product"><?= empty($_SESSION["Cart"]) ? 0 : count($_SESSION["Cart"]) ?></span>
                 </a></li>
             <li>
-                <?php if (empty($_SESSION["id"])) { ?>
+                <?php if (empty($_SESSION["id"]) && empty($_SESSION["idadmin"])) { ?>
                     <a href="/login">Đăng nhập</a>
                 <?php } else { ?>
                     <div class="dropdown">
